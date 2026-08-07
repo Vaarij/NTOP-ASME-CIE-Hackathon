@@ -1,0 +1,10 @@
+# L/D surrogate + dataset (pure Python, no GPU)
+numpy>=1.23
+scipy>=1.9
+pandas>=1.5
+
+# FiLMNet field surrogate only
+torch>=2.0
+
+# NOTE: models/filmnet/filmnet_point_map_export.py additionally requires OpenVSP
+# (external install): https://openvsp.org/download.php
