@@ -88,9 +88,9 @@ shipped data.
 
 | Parameter | Description | Unit | Min | Max |
 |---|---|---|---:|---:|
-| `Altitude` | altitude | kft | 0.001493 | 18 |
-| `KCAS` | calibrated airspeed | kt | 33.02 | 250 |
-| `AOA` | angle of attack | deg | -7.999 | 16 |
+| `Altitude` | altitude | kft | 0.0015 | 18 |
+| `KCAS` | calibrated airspeed | kt | 33 | 250 |
+| `AOA` | angle of attack | deg | -8 | 16 |
 
 **Structure (nTop implicit)**
 
