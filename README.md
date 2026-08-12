@@ -93,14 +93,32 @@ Bounds for every variable are tabulated under [The dataset](#the-dataset).
 
 The pipeline is evaluated against three mission profiles:
 
-| Case | `L/D_target` | Altitude (kft) | KCAS (kt) | AOA (deg) | `V_payload_min` | `V_fuel_min` | `Stress_max` |
-|---|---|---|---|---|---|---|---|
-| Case 1 | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| Case 2 | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
-| Case 3 | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| Case | Condition | `L/D_target` | `V_payload_min` (m³) | `V_fuel_min` (m³) | Altitude (kft) | KCAS (kt) | AOA (deg) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 1 | **High Speed Dash** | 6.0 | 0.75 | 0.45 | 15 | 120 | 1.0 |
+| 2 | **Max Endurance** | 10.0 | 0.80 | 0.45 | 15 | 45 | 8.0 |
+| 3 | **Max Capacity** | 15.0 | 1.00 | 0.65 | 5 | 220 | 4.5 |
 
-> Case values are blank in the released problem statement — they will be populated
-> here when the organizers publish them.
+`Stress_max` is the **335 MPa** structural allowable for all three cases.
+
+**Units.** Volumes above are m³; the CSV stores `Payload Volume` and `Fuel Volume`
+in mm³, so divide by `1e9` before comparing. All three targets are inside what
+the dataset spans (payload 0.066–2.083 m³, fuel 0.017–0.900 m³).
+
+**Difficulty is very uneven — Case 2 is the binding one.** Sweeping 131,072 Sobol
+planforms across the full geometry box through the L/D surrogate at each mission:
+
+| Case | Best `L/D` reachable | Share of sampled planforms meeting target |
+|---|---:|---:|
+| 1 · High Speed Dash | 11.79 | 87.9 % |
+| 2 · **Max Endurance** | **10.47** | **0.0015 %** (2 of 131,072) |
+| 3 · Max Capacity | 22.26 | 7.2 % |
+
+Case 2 asks for `L/D ≥ 10` at 45 KCAS where the ceiling is 10.47 — a ~5 % margin,
+reachable only from a narrow corner (high `B3/C1` and `C4/C1`, high inboard sweep
+`S1`, low `S3`, low `X3/C1`). Random search will not find it; the aerodynamic
+constraint, not mass, will dominate that case. Cases 1 and 3 leave real room to
+trade L/D against structural mass.
 
 ---
 
