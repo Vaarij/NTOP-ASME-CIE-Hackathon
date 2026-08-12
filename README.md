@@ -14,7 +14,7 @@ It provides the three ingredients a participant builds an inverse pipeline on to
 |---|---|
 | **Structures dataset** (13,720 FE designs) | [`data/bwb_structures_dataset.csv`](data/bwb_structures_dataset.csv) |
 | **Forward surrogate** — integrated `L/D` from geometry + flight | [`models/ld_surrogate/`](models/ld_surrogate/) |
-| **Parameterized nTop implicit model** | [`ntop_model/`](ntop_model/) *(drop the `.ntop` file here)* |
+| **Parameterized nTop implicit model** | [`ntop_model/`](ntop_model/) *(BlendedNet++StructuresVisualizeShare.ntop)* |
 
 ---
 
