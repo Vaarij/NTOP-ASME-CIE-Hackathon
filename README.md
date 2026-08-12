@@ -61,7 +61,7 @@ concurrent external and internal geometric definitions.
 | Minimum aerodynamic performance | `L/D_min` | Target lift-to-drag ratio |
 | Minimum payload volume | `V_payload_min` | Volumetric constraint |
 | Minimum fuel volume | `V_fuel_min` | Volumetric constraint |
-| Maximum hot-spot stress | `Stress_max` | Structural safety threshold |
+| Maximum hotspot stress | `Stress_max` | Structural safety threshold |
 
 Flight conditions:
 
@@ -112,7 +112,7 @@ frequencies and shell thicknesses as the external mold line changes:
 ![Parameterized BWB structure](assets/structure_param.gif)
 
 **Finite-element stress field** — each design is solved under the mapped
-aerodynamic + inertial loads; the label is a hot-spot stress read off this field:
+aerodynamic + inertial loads; the label is a hotspot stress read off this field:
 
 ![BWB stress field](assets/stress.gif)
 
@@ -143,7 +143,7 @@ bwb-inverse-design/
 
 `data/bwb_structures_dataset.csv` — **13,720** finite-element designs, one per row.
 Each row is a full BWB design (external planform + internal structure) at a flight
-condition, with the resulting mass, volumes, and peak stress. **28 columns = 24
+condition, with the resulting mass, volumes, and maximum hotspot stress. **28 columns = 24
 input parameters + 4 outputs.**
 
 ### Inputs (24)
@@ -202,12 +202,13 @@ optimizer proposing an even fuselage rib count is off-distribution.
 | `Aircraft Empty Weight` | structural mass to minimize | kg *(19.5 – 1639)* |
 | `Payload Volume` | internal payload volume achieved | mm³ *(÷1e9 → m³)* |
 | `Fuel Volume` | internal fuel volume achieved | mm³ *(÷1e9 → m³)* |
-| `Max Hotspot Stress` | **Maximum hot-spot stress** (feasibility label) | MPa |
+| `Max Hotspot Stress` | **Maximum hotspot stress** (feasibility label) | MPa |
 
-**About the `Max Hotspot Stress` label.** Raw peak FE stress is dominated by mesh
-singularities (unbounded, mesh-dependent). The label here is a **hot-spot stress
-averaged over a fixed 5 mm physical ball** (max of the locally-averaged field,
-worst of the components) — singularity-robust and mesh-independent. The structural
+**About the `Max Hotspot Stress` label.** The raw FE maximum is dominated by mesh
+singularities (unbounded, mesh-dependent). The label here is instead a **maximum
+hotspot stress** — the field averaged over a fixed 5 mm physical ball, then the
+max of that locally-averaged field, worst of the components — which is
+singularity-robust and mesh-independent. The structural
 allowable is **335 MPa** (aluminium 7075-T6 yield / 1.5 safety factor); ~41 % of
 the dataset lies above it on purpose, giving a constraint-boundary-rich sample.
 
