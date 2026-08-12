@@ -74,7 +74,7 @@ shipped data.
 | `C3/C1` | chord ratio (station 3 / root) | – | 0.18 | 0.28 |
 | `C4/C1` | chord ratio (tip / root) | – | 0.06 | 0.09 |
 | `B1/C1` | span-fraction parameter 1 | – | 0.1 | 0.2 |
-| `B2/C1` | span-fraction parameter 2 | – | 0.0501 | 0.2 |
+| `B2/C1` | span-fraction parameter 2 | – | 0.05 | 0.2 |
 | `B3/C1` | span-fraction parameter 3 | – | 0.35 | 0.7 |
 | `X3/C1` | outboard break streamwise fraction | – | 0.5 | 0.65 |
 | `S1` | inboard sweep angle | deg | 40 | 60 |
@@ -93,17 +93,17 @@ shipped data.
 
 | Parameter | Description | Unit | Min | Max |
 |---|---|---|---:|---:|
-| `Skin Thickness` | skin shell thickness | m | 0.0003004 | 0.004994 |
+| `Skin Thickness` | skin shell thickness | m | 0.0003 | 0.0050|
 | `Front Spar Chord %` | front spar chordwise position | frac | 0.18 | 0.35 |
 | `Rear Spar Chord %` | rear spar chordwise position | frac | 0.55 | 0.75 |
-| `Spar Thickness` | spar shell thickness | m | 0.0009761 | 0.007997 |
+| `Spar Thickness` | spar shell thickness | m | 0.00098 | 0.0080 |
 | `# of Ribs` | wing rib count (integer) | – | 3 | 14 |
-| `Rib Thickness` | rib shell thickness | m | 0.0015 | 0.01499 |
-| `Wingbox Cutout` | wingbox cutout fraction | frac | 0.01 | 0.04995 |
+| `Rib Thickness` | rib shell thickness | m | 0.0015 | 0.015 |
+| `Wingbox Cutout` | wingbox cutout fraction | frac | 0.01 | 0.05 |
 | `# of Fuselage Ribs` | fuselage rib count (integer) | – | 3 | 11 |
 | `# of Fuselage Spars` | fuselage spar count (integer) | – | 3 | 12 |
-| `Fuselage Struct Thickness` | fuselage member thickness | m | 0.002 | 0.02499 |
-| `Fuselage Struct Width` | fuselage member width | m | 0.001038 | 0.01499 |
+| `Fuselage Struct Thickness` | fuselage member thickness | m | 0.002 | 0.025 |
+| `Fuselage Struct Width` | fuselage member width | m | 0.0010 | 0.015 |
 
 ### Outputs (4)
 
