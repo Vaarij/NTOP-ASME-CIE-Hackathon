@@ -76,6 +76,16 @@ Predictions outside these ranges are extrapolation (`predict_ld` returns a
 - `Re_L` ∈ [5.1e4, 1.0e8],  `M_inf` ∈ [0.05, 0.50],  `alpha` ∈ [−8°, 16°]
 - planform bounds in `aero_design_space.json`
 
+`aero_design_space.json` covers a slightly wider box than the shipped structures
+CSV — its `S3` ceiling is ≈45° where the CSV stops at 40° — and its
+`n_feasible = 3860` is unrelated to the structural 335 MPa allowable.
+
+Every structures-CSV design sits inside the **geometry** envelope, so planform
+never triggers a warning. The **flight** envelope is the one to watch: evaluating
+CSV rows at their own flight conditions warns on ~0.6 % of them, always
+`M_inf` marginally over the 0.50 ceiling (fast, low-altitude points). Check the
+`warnings` list rather than assuming a mission is in-envelope.
+
 ## Retraining
 
 ```bash
