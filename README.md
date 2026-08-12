@@ -48,7 +48,7 @@ bwb-inverse-design/
 │       ├── film_model_v1.py, checkpoints/film_best.pth, norm_stats.json
 │       ├── filmnet_point_map_export.py, filmnet_direct_stl.py
 │       └── README.md
-├── ntop_model/                         # (empty) parameterized nTop implicit model goes here
+├── ntop_model/                         # parameterized nTop implicit model (+ free-license info)
 ├── assets/                             # visualizations used in this README
 ├── requirements.txt
 └── README.md
@@ -165,10 +165,16 @@ or use the dataset directly) → drive `L/D → L/D_target`, `stress ≤ 335 MPa
 
 ## The nTop model
 
-`ntop_model/` is intentionally empty — drop the parameterized BWB implicit model
-(`BlendedNet++*.ntop`) here. It is the generator behind the structural dataset:
+[`ntop_model/`](ntop_model/) holds the parameterized BWB implicit model
+(`BlendedNet++*.ntop`) — the generator behind the structural dataset, whose
 internal rib/spar layout and shell thicknesses adapt automatically to the external
-mold line (see the first visualization above).
+mold line (see the first visualization above). You only need it to regenerate
+geometry or run new structural cases; the dataset and surrogates here are
+self-contained.
+
+Running the `.ntop` file requires **nTop**. Students and educators can request a
+**free license** through the nTop education program — **<https://www.ntop.com/education/>**.
+See [`ntop_model/README.md`](ntop_model/README.md) for details.
 
 ---
 
