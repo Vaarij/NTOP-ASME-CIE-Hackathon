@@ -13,7 +13,7 @@ It provides the three ingredients a participant builds an inverse pipeline on to
 | Provided artifact | Where it lives here |
 |---|---|
 | **Structures dataset** (13,720 FE designs) | [`data/bwb_structures_dataset.csv`](data/bwb_structures_dataset.csv) |
-| **Forward surrogates** — integrated `L/D` and field-resolved surface aero | [`models/ld_surrogate/`](models/ld_surrogate/) · [`models/filmnet/`](models/filmnet/) |
+| **Forward surrogate** — integrated `L/D` from geometry + flight | [`models/ld_surrogate/`](models/ld_surrogate/) |
 | **Parameterized nTop implicit model** | [`ntop_model/`](ntop_model/) *(drop the `.ntop` file here)* |
 
 ---
@@ -39,16 +39,13 @@ bwb-inverse-design/
 ├── data/
 │   └── bwb_structures_dataset.csv      # 13,720 designs × (24 params + 4 outputs)
 ├── models/
-│   ├── ld_surrogate/                   # geometry + flight -> CL, CD, L/D  (pure NumPy)
-│   │   ├── predict_ld.py               #   -> start here: predict_ld(geom, alt, kcas, aoa)
-│   │   ├── regressor.py, reg_full.json, reg_feasible.json
-│   │   ├── flight_conversion.py, aero_design_space.json
-│   │   └── README.md
-│   └── filmnet/                        # field-resolved surface aero  (PyTorch)
-│       ├── film_model_v1.py, checkpoints/film_best.pth, norm_stats.json
-│       ├── filmnet_point_map_export.py, filmnet_direct_stl.py
+│   └── ld_surrogate/                   # geometry + flight -> CL, CD, L/D  (pure NumPy)
+│       ├── predict_ld.py               #   -> start here: predict_ld(geom, alt, kcas, aoa)
+│       ├── regressor.py, reg_full.json, reg_feasible.json
+│       ├── flight_conversion.py, aero_design_space.json
 │       └── README.md
 ├── ntop_model/                         # parameterized nTop implicit model (+ free-license info)
+│   └── BlendedNet++StructuresVisualizeShare.ntop
 ├── assets/                             # visualizations used in this README
 ├── requirements.txt
 └── README.md
@@ -126,7 +123,7 @@ the dataset lies above it on purpose, giving a constraint-boundary-rich sample.
 
 ---
 
-## The forward models
+## The forward model
 
 ### L/D surrogate — `models/ld_surrogate/`
 Torch-free MLP: `(9 planform vars + C1) + (altitude, KCAS, AoA) → CL, CD, L/D`.
@@ -138,11 +135,6 @@ coupling the challenge is about. See [`models/ld_surrogate/README.md`](models/ld
 ```bash
 python models/ld_surrogate/predict_ld.py --demo
 ```
-
-### FiLMNet — `models/filmnet/`
-Field-resolved surface aerodynamics: predicts local pressure / skin-friction over
-the whole skin, conditioned on geometry + flight. PyTorch; the point-map exporter
-additionally needs OpenVSP. See [`models/filmnet/README.md`](models/filmnet/README.md).
 
 ---
 
@@ -180,8 +172,8 @@ See [`ntop_model/README.md`](ntop_model/README.md) for details.
 
 ## Requirements
 
-- **L/D surrogate + dataset:** `numpy`, `scipy`, `pandas` (pure Python, no GPU).
-- **FiLMNet:** `torch`; the point-map exporter also needs **OpenVSP** (external).
+`numpy`, `scipy`, `pandas` — pure Python, no GPU. That's all the L/D surrogate and
+dataset need.
 
 ## Attribution
 
