@@ -112,7 +112,7 @@ shipped data.
 | `Aircraft Empty Weight` | structural mass to minimize | kg |
 | `Payload Volume` | internal payload volume achieved | mm³ *(÷1e9 → m³)* |
 | `Fuel Volume` | internal fuel volume achieved | mm³ *(÷1e9 → m³)* |
-| `stress` | **hot-spot stress** (feasibility label) | MPa |
+| `Stress` | **Maximum hot-spot stress** (feasibility label) | MPa |
 
 **About the `stress` label.** Raw peak FE stress is dominated by mesh
 singularities (unbounded, mesh-dependent). The label here is a **hot-spot stress
