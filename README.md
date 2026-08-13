@@ -342,9 +342,11 @@ $$
 
 **Breakdown**
 
-- **Mass ($M$) — weight 0.4.** Minimized directly. Dividing by a reference mass
-  $M_{ref}$ keeps it dimensionless so it scales cleanly against the other terms;
-  the term shrinks as mass drops.
+- **Mass ($M$) — weight 0.4.** Minimized directly. Dividing by the reference mass
+  $M_{ref} = 50$ kg keeps it dimensionless so it scales cleanly against the other
+  terms; the term shrinks as mass drops. $M_{ref}$ is a fixed normalizer, not a
+  target — it is the same 50 kg for all three test cases, so scores stay
+  comparable across them.
 - **Target metrics ($LD$, $V_f$, $V_p$) — weight 0.2 each.** Scored one-sided with
   $\mathrm{ReLU}(x) = \max(0, x)$:
   - **Exceed** the target → the bracket is negative, ReLU returns **0**, no penalty
