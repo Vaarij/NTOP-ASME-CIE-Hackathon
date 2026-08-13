@@ -216,21 +216,7 @@ singularity-robust and mesh-independent. The structural
 allowable is **335 MPa** (aluminium 7075-T6 yield / 1.5 safety factor); ~41 % of
 the dataset lies above it on purpose, giving a constraint-boundary-rich sample.
 
-The label is nonetheless **heavy-tailed**: median 229 MPa, p99 8,791 MPa, max
-3.9e6 MPa. In `log10` the distribution is smooth and unimodal — the tail is not a
-separate failure mode but the continuation of a physical trend, with the highest-
-stress designs sitting at thin skin / thin spar / few ribs / large `C1`.
-
-**Fit stress in log space, and keep every row.** A raw-MPa least-squares fit is
-dominated by the top 1 %; `log10(stress)` is well-behaved across the full range.
-Dropping the tail is the wrong move — those rows are all decisively infeasible,
-and they occupy exactly the thin-structure corner a mass-minimizing optimizer is
-drawn toward. Discard them and the surrogate turns optimistic precisely where it
-must not be. If the extreme magnitudes bother you, winsorize the *target* (e.g.
-clip at 10× allowable) rather than deleting rows — above ~10× the exact value
-carries no information a feasibility constraint can use.
-
-No cells are missing: all 28 columns are fully numeric across all 13,720 rows.
+All 28 columns are fully numeric across all 13,720 rows.
 
 ---
 
@@ -246,12 +232,6 @@ coupling the challenge is about. See [`models/ld_surrogate/README.md`](models/ld
 ```bash
 python models/ld_surrogate/predict_ld.py --demo
 ```
-
-**Design bounds.** Use the parameter tables above. `aero_design_space.json` ships
-with the surrogate and covers a slightly wider box (e.g. `S3` to ≈45° where this
-dataset stops at 40°), so geometry from these tables never extrapolates. Flight
-conditions can: ~0.6 % of CSV rows evaluated at their own mission exceed the
-`M_inf ≤ 0.50` ceiling. `predict_ld` returns a `warnings` list — check it.
 
 ---
 
