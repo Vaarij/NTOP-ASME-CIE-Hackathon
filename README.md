@@ -5,8 +5,8 @@
 This repository bundles the **data and forward models** for the Blended-Wing-Body
 (BWB) structural inverse-design challenge: given a mission profile and structural
 constraints, find the **lightest internal structure and external planform** whose
-stress stays under the allowable while hitting a target lift-to-drag ratio and
-meeting payload/fuel volume.
+stress stays under the allowable, while getting as close as possible to a target
+lift-to-drag ratio and the payload/fuel volume minima.
 
 It provides the three ingredients a participant builds an inverse pipeline on top of:
 
@@ -56,12 +56,20 @@ concurrent external and internal geometric definitions.
 
 ### Inputs — the mission profile and constraints
 
-| Input | Symbol | Description |
-|---|---|---|
-| Minimum aerodynamic performance | `L/D_min` | Target lift-to-drag ratio |
-| Minimum payload volume | `V_payload_min` | Volumetric constraint |
-| Minimum fuel volume | `V_fuel_min` | Volumetric constraint |
-| Maximum hotspot stress | `Stress_max` | Structural safety threshold |
+| Input | Symbol | Description | Type |
+|---|---|---|---|
+| Minimum aerodynamic performance | `L/D_min` | Target lift-to-drag ratio | **soft target** |
+| Minimum payload volume | `V_payload_min` | Volumetric target | **soft target** |
+| Minimum fuel volume | `V_fuel_min` | Volumetric target | **soft target** |
+| Maximum hotspot stress | `Stress_max` | Structural safety threshold | **hard constraint** |
+
+**Only `Stress_max` is a hard constraint.** A design whose maximum hotspot stress
+exceeds the allowable is **invalid** — it is discarded for that case no matter how
+good the rest of it looks. `L/D_min`, `V_payload_min`, and `V_fuel_min` are
+targets: get as close as you can and report the shortfall. Missing one degrades
+the score; it never invalidates the design. This is deliberate, since it lets you
+trade a small volume or `L/D` miss against a real mass saving, which is exactly
+the multidisciplinary trade the challenge is about.
 
 Flight conditions:
 
@@ -99,7 +107,9 @@ The pipeline is evaluated against three mission profiles:
 | 2 | **Max Endurance** | 10.0 | 0.80 | 0.45 | 15 | 45 | 8.0 |
 | 3 | **Max Capacity** | 15.0 | 1.00 | 0.65 | 5 | 220 | 4.5 |
 
-`Stress_max` is the **335 MPa** structural allowable for all three cases.
+`Stress_max` is the **335 MPa** structural allowable for all three cases, and it
+is the one threshold that **must** be met — the `L/D` and volume figures above are
+targets to approach, not pass/fail gates.
 
 **Units.** Volumes above are m³; the CSV stores `Payload Volume` and `Fuel Volume`
 in mm³, so divide by `1e9` before comparing. All three targets are inside what
@@ -249,8 +259,9 @@ python -c "import pandas as pd; d=pd.read_csv('data/bwb_structures_dataset.csv')
 
 A minimal inverse-design loop then: propose a design vector → predict `L/D`
 (L/D surrogate) and `mass / volumes / stress` (fit your own surrogates on the CSV,
-or use the dataset directly) → drive `L/D → L/D_target`, `stress ≤ 335 MPa`,
-`volumes ≥ minima`, minimizing mass.
+or use the dataset directly) → **reject anything with `stress > 335 MPa`**, then
+among the survivors minimize mass while penalizing the shortfall against
+`L/D_target` and the volume minima.
 
 ## The nTop model
 
@@ -295,7 +306,7 @@ Teams submit a zipped repository containing:
 | Deliverable | Detail |
 |---|---|
 | **Inverse pipeline implementation** | Well-documented Python scripts or Jupyter notebooks implementing the optimization / ML algorithm that maps the specified inputs to the outputs. *If the organizers cannot validate your code, the results are considered invalid.* |
-| **Output summary file** | CSV or JSON of the generated optimal design variables (10 planform + 11 structural) evaluated against all 3 test-case mission profiles. |
+| **Output summary file** | CSV or JSON of the generated optimal design variables (10 planform + 11 structural) evaluated against all 3 test-case mission profiles, together with the achieved mass, `L/D`, payload/fuel volumes, and maximum hotspot stress per case — so the stress constraint can be checked and any `L/D`/volume shortfall scored. |
 | **Technical summary** | Max 3-page PDF explaining the optimization strategy, how volumetric and stress constraints were handled, and visualizations of the trade-off spaces (e.g. Pareto front of mass vs. aerodynamic efficiency). |
 | **Reproducibility guide** | A `README.md` outlining software dependencies (`requirements.txt` or environment files) and exact execution commands. |
 
@@ -303,7 +314,7 @@ Teams submit a zipped repository containing:
 
 | Criterion | Points | What it measures |
 |---|---:|---|
-| Design optimization performance | 40 | Accuracy in achieving `L/D_target`, minimizing overall structural mass, and satisfying payload/fuel volume and structural safety thresholds |
+| Design optimization performance | 40 | Meeting the 335 MPa structural allowable (**required** — a design over it is invalid and scores nothing for that case), then minimizing overall structural mass and how closely `L/D_target` and the payload/fuel volume minima are approached |
 | Methodological innovation | 20 | Rigor, algorithmic efficiency, and sophistication of the inverse loop or ML approach |
 | Multidisciplinary parameter coupling | 20 | How intelligently the pipeline balances trade-offs between external aerodynamics and internal implicit structural properties |
 | Code cleanliness & reproducibility | 20 | Compliance with submission instructions, readability of code, and clarity of the final technical presentation |
