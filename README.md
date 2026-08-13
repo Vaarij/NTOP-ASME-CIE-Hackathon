@@ -333,9 +333,9 @@ variable is **normalized against its target or a baseline reference** before the
 $$
 \begin{aligned}
 \mathcal{L} = {} & 0.4 \left( \frac{M}{M_{ref}} \right) \\
-& + 0.2 \, \mathrm{ReLU} \left( \frac{LD_{target} - LD}{LD_{target}} \right) \\
-& + 0.2 \, \mathrm{ReLU} \left( \frac{V_{f,target} - V_f}{V_{f,target}} \right) \\
-& + 0.2 \, \mathrm{ReLU} \left( \frac{V_{p,target} - V_p}{V_{p,target}} \right) \\
+& + 0.2 \thinspace \mathrm{ReLU} \left( \frac{LD_{target} - LD}{LD_{target}} \right) \\
+& + 0.2 \thinspace \mathrm{ReLU} \left( \frac{V_{f,target} - V_f}{V_{f,target}} \right) \\
+& + 0.2 \thinspace \mathrm{ReLU} \left( \frac{V_{p,target} - V_p}{V_{p,target}} \right) \\
 & + \mathcal{P}_{stress}
 \end{aligned}
 $$
@@ -363,7 +363,7 @@ $$
 $$
 
 with $\sigma_{max} = 335$ MPa. If your optimizer cannot handle infinity, substitute a
-large penalty barrier such as $\lambda\,\mathrm{ReLU}(\sigma - \sigma_{max})$ with
+large penalty barrier such as $\lambda\thinspace \mathrm{ReLU}(\sigma - \sigma_{max})$ with
 $\lambda$ set arbitrarily high (e.g. $10^6$).
 
 ---
