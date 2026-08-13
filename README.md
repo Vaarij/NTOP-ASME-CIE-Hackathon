@@ -261,7 +261,8 @@ A minimal inverse-design loop then: propose a design vector → predict `L/D`
 (L/D surrogate) and `mass / volumes / stress` (fit your own surrogates on the CSV,
 or use the dataset directly) → **reject anything with `stress > 335 MPa`**, then
 among the survivors minimize mass while penalizing the shortfall against
-`L/D_target` and the volume minima.
+`L/D_target` and the volume minima. The exact objective this is scored on is in
+[The scoring metric](#the-scoring-metric).
 
 ## The nTop model
 
@@ -318,6 +319,50 @@ Teams submit a zipped repository containing:
 | Methodological innovation | 20 | Rigor, algorithmic efficiency, and sophistication of the inverse loop or ML approach |
 | Multidisciplinary parameter coupling | 20 | How intelligently the pipeline balances trade-offs between external aerodynamics and internal implicit structural properties |
 | Code cleanliness & reproducibility | 20 | Compliance with submission instructions, readability of code, and clarity of the final technical presentation |
+
+### The scoring metric
+
+Design optimization performance is scored with the loss function below — the same
+objective you should be minimizing inside your inverse loop. Full write-up:
+[`assets/optimization_loss_function2.pdf`](assets/optimization_loss_function2.pdf).
+
+Because the terms carry different units (kg vs. m³ vs. dimensionless `L/D`), every
+variable is **normalized against its target or a baseline reference** before the
+40/20/20/20 weighting is applied — otherwise the weights are skewed by unit choice.
+
+$$
+\mathcal{L} = 0.4\left(\frac{M}{M_{ref}}\right)
++ 0.2\,\mathrm{ReLU}\left(\frac{LD_{target} - LD}{LD_{target}}\right)
++ 0.2\,\mathrm{ReLU}\left(\frac{V_{f,target} - V_f}{V_{f,target}}\right)
++ 0.2\,\mathrm{ReLU}\left(\frac{V_{p,target} - V_p}{V_{p,target}}\right)
++ \mathcal{P}_{stress}
+$$
+
+**Breakdown**
+
+- **Mass ($M$) — weight 0.4.** Minimized directly. Dividing by a reference mass
+  $M_{ref}$ keeps it dimensionless so it scales cleanly against the other terms;
+  the term shrinks as mass drops.
+- **Target metrics ($LD$, $V_f$, $V_p$) — weight 0.2 each.** Scored one-sided with
+  $\mathrm{ReLU}(x) = \max(0, x)$:
+  - **Exceed** the target → the bracket is negative, ReLU returns **0**, no penalty
+    (over-delivering earns nothing extra).
+  - **Below** the target → the bracket is positive and you take a penalty
+    **proportional to the fractional shortfall**, weighted by 0.2.
+- **Stress hard constraint ($\mathcal{P}_{stress}$).** Exceeding the allowable makes
+  the design entirely invalid, so it acts as a step penalty:
+
+$$
+\mathcal{P}_{stress} =
+\begin{cases}
+0 & \text{if } \sigma \le \sigma_{max} \\
+\infty & \text{if } \sigma > \sigma_{max}
+\end{cases}
+$$
+
+with $\sigma_{max} = 335$ MPa. If your optimizer cannot handle infinity, substitute a
+large penalty barrier such as $\lambda\,\mathrm{ReLU}(\sigma - \sigma_{max})$ with
+$\lambda$ set arbitrarily high (e.g. $10^6$).
 
 ---
 
