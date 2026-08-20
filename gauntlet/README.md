@@ -1,19 +1,34 @@
-# BWB optimizer gauntlet
+# Runnable mission cases
 
-Run an optimizer target with the documented contract:
+This directory contains the machine-readable versions of the three mission
+profiles defined in the repository [README](../README.md). The coupled-stress
+notebook reads these cases when it produces one optimized design per mission.
 
-```bash
-python3 gauntlet/score_candidates.py --target sample_1/main.py
-```
+## Run the current workflow
 
-The scorer starts the target from its own directory as:
+From the repository root, install dependencies with
+`pip install -r requirements.txt`, then run all cells in
+`coupled_stress_optimization.ipynb`. It reads
+`gauntlet/runnable_cases.json` and writes the following files under `outputs/`:
 
-```bash
-python3 main.py --cases /absolute/path/to/gauntlet/runnable_cases.json --output /temporary/candidates.json
-```
+- `coupled_stress_output_summary.csv` — the submission-ready table containing
+  mission conditions, all 21 design variables, and achieved metrics.
+- `coupled_stress_candidates.json` — the same selected designs in a
+  machine-readable candidate envelope.
+- `coupled_stress_diagnostics.json` — surrogate-validation and optimization
+  diagnostics.
+- `coupled_stress_validation.png` — a compact validation and search-history
+  figure.
 
-`runnable_cases.json` contains the three original README missions. The target
-must write this exact JSON shape:
+The notebook uses a surrogate-only stress check because this repository does
+not provide a callable FE solver. Its conservative stress upper bound is used
+for optimizer selection; the CSV reports the predicted mean hotspot stress.
+
+## Candidate JSON format
+
+`coupled_stress_candidates.json` contains one candidate for every supplied
+case. Each candidate echoes the mission from `runnable_cases.json`, includes
+the 21 design variables, and reports the achieved metrics:
 
 ```json
 {
@@ -30,93 +45,27 @@ must write this exact JSON shape:
         "aoa_deg": 1.0,
         "stress_max_mpa": 335.0
       },
-      "design": {
-        "C2/C1": 0.70,
-        "C3/C1": 0.23,
-        "C4/C1": 0.075,
-        "B1/C1": 0.15,
-        "B2/C1": 0.12,
-        "B3/C1": 0.52,
-        "X3/C1": 0.575,
-        "S1": 50.0,
-        "S3": 30.0,
-        "C1": 3000.0,
-        "Skin Thickness": 0.003,
-        "Front Spar Chord %": 0.25,
-        "Rear Spar Chord %": 0.65,
-        "Spar Thickness": 0.004,
-        "# of Ribs": 8,
-        "Rib Thickness": 0.006,
-        "Wingbox Cutout": 0.03,
-        "# of Fuselage Ribs": 7,
-        "# of Fuselage Spars": 6,
-        "Fuselage Struct Thickness": 0.010,
-        "Fuselage Struct Width": 0.006
-      },
+      "design": { "...": "21 design variables" },
       "metrics": {
-        "empty_mass_kg": 50.0,
-        "ld": 6.0,
-        "payload_volume_m3": 0.75,
-        "fuel_volume_m3": 0.45,
-        "max_hotspot_stress_mpa": 335.0
+        "empty_mass_kg": 0.0,
+        "ld": 0.0,
+        "payload_volume_m3": 0.0,
+        "fuel_volume_m3": 0.0,
+        "max_hotspot_stress_mpa": 0.0
       }
     }
   ]
 }
 ```
 
-The target must return one record for every supplied case and echo each mission
-exactly. `output_schema.json` documents the envelope; the scorer is stricter and
-also enforces the documented variable bounds and integer axes.
+The CSV is the preferred file for reviewing or submitting results: it includes
+the mission targets and conditions beside the selected design and its achieved
+metrics. Volumes in both outputs are expressed in m³; stress is in MPa.
 
-The loss follows `README.md`: `0.4 * mass / 50` plus weighted fractional
-shortfalls for L/D, fuel volume, and payload volume. Stress above 335 MPa is a
-hard failure with infinite loss. The two records in
-`negative_stress_fixtures.json` are regression fixtures for that rule, not
-missions sent to an optimizer.
+## Sensitivity utility
 
-## Volume-target stress sensitivity
-
-Run an optimizer against a baseline plus independent ±10% payload- and
-fuel-volume target perturbations:
-
-```bash
-python3 gauntlet/robustness_check.py --target path/to/main.py --percent 10 \
-  --report outputs/volume_stress_sensitivity.json
-```
-
-The command runs five scenarios for each original mission: baseline, payload
-−/+10%, and fuel −/+10%. It reports one-sided stress deltas and centered
-sensitivities in MPa/m³. A scenario over 335 MPa remains visible in the report;
-the command is a sensitivity measurement, not a pass/fail robustness gate.
-
-## Hybrid sklearn verification
-
-The maintained target is `hybrid_sklearn_optimization.py`. Its default search is
-fast enough for repeated gauntlet checks; use a larger global DE budget only for
-an offline final run:
-
-```bash
-python3 hybrid_sklearn_optimization.py --cases gauntlet/runnable_cases.json \
-  --output outputs/hybrid_candidates.json --diagnostics outputs/hybrid_diagnostics.json \
-  --de-maxiter 100
-```
-
-Diagnostics distinguish an optimizer-feasible result from a stress-safe
-database fallback. The fallback preserves the strict output contract but is not
-evidence that every mission threshold was met.
-
-Verify the hybrid sklearn optimizer across three deterministic root seeds while
-recording both stress-sensitivity consistency and whether selected candidates
-are database seeds or off-grid search results:
-
-```bash
-python3 gauntlet/verify_hybrid_sklearn.py
-```
-
-The verifier writes a JSON summary and a scenario-level CSV under `outputs/`.
-It reports provenance rather than rejecting database-seed selections, since the
-optimizer deliberately uses a hybrid seed-plus-continuous-search strategy.
-
-`sample_1/main.py` is only a protocol smoke-test: its metrics are synthetic and
-must be replaced by a real evaluated optimizer output.
+`robustness_check.py` is retained for command-line optimizers that accept
+`--cases` and `--output` arguments. It creates baseline and independent ±10%
+payload/fuel-target variants, then reports stress deltas and centered
+sensitivities. It relies on the gauntlet scoring helper, so it is not part of
+the notebook execution path.
