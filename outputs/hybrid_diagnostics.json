@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "root_seed": 20260819,
+  "candidates": [
+    {
+      "case_id": "high_speed_dash",
+      "base_case_id": "high_speed_dash",
+      "search_seed": 20975502,
+      "selected_origin": "database_fallback",
+      "optimizer_feasible": false,
+      "constraint_violation": 1.2382667392443323,
+      "objective": 1.9570500888,
+      "stress_uncertainty_mpa": 0.0,
+      "stress_ucb_mpa": 10.45487575,
+      "feasibility_probability": 1.0,
+      "fallback_dataset_row": 2879,
+      "nearest_dataset_row": 2879,
+      "nearest_normalized_distance": 0.0,
+      "exact_database_match": true
+    },
+    {
+      "case_id": "max_endurance",
+      "base_case_id": "max_endurance",
+      "search_seed": 20510295,
+      "selected_origin": "database_fallback",
+      "optimizer_feasible": false,
+      "constraint_violation": 1.3766608588631084,
+      "objective": 4.313834310098275,
+      "stress_uncertainty_mpa": 0.0,
+      "stress_ucb_mpa": 8.698066092548077,
+      "feasibility_probability": 1.0,
+      "fallback_dataset_row": 10854,
+      "nearest_dataset_row": 10854,
+      "nearest_normalized_distance": 0.0,
+      "exact_database_match": true
+    },
+    {
+      "case_id": "max_capacity",
+      "base_case_id": "max_capacity",
+      "search_seed": 20410467,
+      "selected_origin": "database_fallback",
+      "optimizer_feasible": false,
+      "constraint_violation": 2.399742950603189,
+      "objective": 2.3679161064100684,
+      "stress_uncertainty_mpa": 0.0,
+      "stress_ucb_mpa": 32.35246693617021,
+      "feasibility_probability": 1.0,
+      "fallback_dataset_row": 8581,
+      "nearest_dataset_row": 8581,
+      "nearest_normalized_distance": 0.0,
+      "exact_database_match": true
+    }
+  ]
+}

@@ -1,0 +1,3939 @@
+{
+  "schema_version": 1,
+  "surrogate_only_validation": true,
+  "stress_calibration": {
+    "k": 3.8551761980933983,
+    "scale_floor_mpa": 75.80208099830061
+  },
+  "model_validation": [
+    {
+      "band": "<250",
+      "rows": 1071,
+      "mae_mpa": 64.34892731277449,
+      "bias_mpa": 49.39042528627813,
+      "ucb_coverage": 1.0
+    },
+    {
+      "band": "250-300",
+      "rows": 94,
+      "mae_mpa": 109.46515515992029,
+      "bias_mpa": 38.40967992536961,
+      "ucb_coverage": 1.0
+    },
+    {
+      "band": "300-320",
+      "rows": 31,
+      "mae_mpa": 123.97746646669651,
+      "bias_mpa": 23.584280704612194,
+      "ucb_coverage": 1.0
+    },
+    {
+      "band": "320-335",
+      "rows": 21,
+      "mae_mpa": 125.05850022054966,
+      "bias_mpa": 41.36338242480282,
+      "ucb_coverage": 1.0
+    },
+    {
+      "band": "335-355",
+      "rows": 31,
+      "mae_mpa": 132.37268970923398,
+      "bias_mpa": 11.3305938142496,
+      "ucb_coverage": 1.0
+    },
+    {
+      "band": ">=355",
+      "rows": 792,
+      "mae_mpa": 529.7775213891207,
+      "bias_mpa": -395.57939108397494,
+      "ucb_coverage": 0.7840909090909091
+    }
+  ],
+  "candidates": [
+    {
+      "case_id": "high_speed_dash",
+      "selected_origin": "optimized_conservative",
+      "fallback_dataset_row": null,
+      "official_loss": 0.6953053976674647,
+      "stress_mean_mpa": 41.96140849237022,
+      "stress_uncertainty_mpa": 70.34665182866794,
+      "stress_ucb_mpa": 334.19178692296657,
+      "stress_limit_mpa": 335.0,
+      "gate_high_probability": 0.02,
+      "low_expert_stress_mpa": 32.274589707687014,
+      "high_expert_stress_mpa": 516.6155289418473,
+      "source": "optimized_conservative",
+      "pool_size": 86778,
+      "conservative_pool_count": 37702,
+      "global_searches": [
+        {
+          "label": "global_1",
+          "seed": 20975502,
+          "score": 0.7904772273540751,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 5.423613365674594e-05,
+              "loss": 1.7787898000110083,
+              "stress_mean": 39.63753941185749,
+              "stress_ucb": 331.86791784245383
+            },
+            {
+              "generation": 2,
+              "movement": 0.4999892930168142,
+              "convergence": 3.924065433641092e-05,
+              "loss": 1.508628227774156,
+              "stress_mean": 35.83790307173817,
+              "stress_ucb": 332.1268975295237
+            },
+            {
+              "generation": 3,
+              "movement": 0.0,
+              "convergence": 4.53862492908412e-05,
+              "loss": 1.508628227774156,
+              "stress_mean": 35.83790307173817,
+              "stress_ucb": 332.1268975295237
+            },
+            {
+              "generation": 4,
+              "movement": 0.8181818181818181,
+              "convergence": 4.4137562238652324e-05,
+              "loss": 1.1723019749199932,
+              "stress_mean": 40.606234183137545,
+              "stress_ucb": 332.8366126137339
+            },
+            {
+              "generation": 5,
+              "movement": 0.0,
+              "convergence": 3.708817231622826e-05,
+              "loss": 1.1723019749199932,
+              "stress_mean": 40.606234183137545,
+              "stress_ucb": 332.8366126137339
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 3.9072367469388104e-05,
+              "loss": 1.1723019749199932,
+              "stress_mean": 40.606234183137545,
+              "stress_ucb": 332.8366126137339
+            },
+            {
+              "generation": 7,
+              "movement": 0.460833485276564,
+              "convergence": 4.340059492997318e-05,
+              "loss": 1.14049093073557,
+              "stress_mean": 38.69076458806262,
+              "stress_ucb": 333.67272803300267
+            },
+            {
+              "generation": 8,
+              "movement": 0.33867127477751624,
+              "convergence": 4.155200107400544e-05,
+              "loss": 1.1067528650950376,
+              "stress_mean": 32.72555980300172,
+              "stress_ucb": 324.9559382335981
+            },
+            {
+              "generation": 9,
+              "movement": 0.0,
+              "convergence": 3.5995990867388326e-05,
+              "loss": 1.1067528650950376,
+              "stress_mean": 32.72555980300172,
+              "stress_ucb": 324.9559382335981
+            },
+            {
+              "generation": 10,
+              "movement": 0.5941180389807568,
+              "convergence": 3.265804084229483e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 3.14563224021453e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 12,
+              "movement": 0.0,
+              "convergence": 3.0307782159935452e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 13,
+              "movement": 0.0,
+              "convergence": 3.106635083211051e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 2.8665053923129465e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 15,
+              "movement": 0.0,
+              "convergence": 2.6027762723485743e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 16,
+              "movement": 0.0,
+              "convergence": 2.6792981851124147e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 2.458076829266473e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 18,
+              "movement": 0.0,
+              "convergence": 1.9116649475026085e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 1.8055143120123272e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 1.7887009399703916e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 21,
+              "movement": 0.0,
+              "convergence": 1.665425966665626e-05,
+              "loss": 1.0703525637804874,
+              "stress_mean": 37.30866846375314,
+              "stress_ucb": 329.5390468943495
+            },
+            {
+              "generation": 22,
+              "movement": 0.3528296775146366,
+              "convergence": 1.5301284403575297e-05,
+              "loss": 1.0559575357206161,
+              "stress_mean": 37.99906014077543,
+              "stress_ucb": 330.2294385713718
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 1.3097074008452787e-05,
+              "loss": 1.0559575357206161,
+              "stress_mean": 37.99906014077543,
+              "stress_ucb": 330.2294385713718
+            },
+            {
+              "generation": 24,
+              "movement": 0.4545454545454546,
+              "convergence": 1.7865598097317308e-05,
+              "loss": 1.042840899627612,
+              "stress_mean": 42.562091124091104,
+              "stress_ucb": 334.7924695546875
+            },
+            {
+              "generation": 25,
+              "movement": 0.0,
+              "convergence": 1.6918382267038756e-05,
+              "loss": 1.042840899627612,
+              "stress_mean": 42.562091124091104,
+              "stress_ucb": 334.7924695546875
+            },
+            {
+              "generation": 26,
+              "movement": 0.7554655400521978,
+              "convergence": 1.6680721419898232e-05,
+              "loss": 1.03617230098694,
+              "stress_mean": 36.37779717218503,
+              "stress_ucb": 328.6081756027814
+            },
+            {
+              "generation": 27,
+              "movement": 0.33347136968253316,
+              "convergence": 1.5570501583045797e-05,
+              "loss": 1.0153144358444182,
+              "stress_mean": 37.84381436588211,
+              "stress_ucb": 330.0741927964785
+            },
+            {
+              "generation": 28,
+              "movement": 0.3544630706836459,
+              "convergence": 1.5420121971256105e-05,
+              "loss": 1.0106103740545969,
+              "stress_mean": 41.3278617634799,
+              "stress_ucb": 333.5582401940763
+            },
+            {
+              "generation": 29,
+              "movement": 0.0,
+              "convergence": 1.3477906387002574e-05,
+              "loss": 1.0106103740545969,
+              "stress_mean": 41.3278617634799,
+              "stress_ucb": 333.5582401940763
+            },
+            {
+              "generation": 30,
+              "movement": 0.3593313076275497,
+              "convergence": 1.3168613983587693e-05,
+              "loss": 0.9916963953423538,
+              "stress_mean": 42.46090508515817,
+              "stress_ucb": 334.69128351575455
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 1.153965901176991e-05,
+              "loss": 0.9916963953423538,
+              "stress_mean": 42.46090508515817,
+              "stress_ucb": 334.69128351575455
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 9.44549580804333e-06,
+              "loss": 0.9916963953423538,
+              "stress_mean": 42.46090508515817,
+              "stress_ucb": 334.69128351575455
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 8.216531547992671e-06,
+              "loss": 0.9916963953423538,
+              "stress_mean": 42.46090508515817,
+              "stress_ucb": 334.69128351575455
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 8.21647465608694e-06,
+              "loss": 0.9916963953423538,
+              "stress_mean": 42.46090508515817,
+              "stress_ucb": 334.69128351575455
+            },
+            {
+              "generation": 35,
+              "movement": 0.4444444444444444,
+              "convergence": 6.586705703274954e-06,
+              "loss": 0.9630583528834455,
+              "stress_mean": 38.49830668579849,
+              "stress_ucb": 330.72868511639484
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 6.586612571460546e-06,
+              "loss": 0.9630583528834455,
+              "stress_mean": 38.49830668579849,
+              "stress_ucb": 330.72868511639484
+            },
+            {
+              "generation": 37,
+              "movement": 0.5593473062239905,
+              "convergence": 6.586471387363125e-06,
+              "loss": 0.9519231676213217,
+              "stress_mean": 41.82599116550331,
+              "stress_ucb": 334.05636959609967
+            },
+            {
+              "generation": 38,
+              "movement": 0.0,
+              "convergence": 6.5864130346468755e-06,
+              "loss": 0.9519231676213217,
+              "stress_mean": 41.82599116550331,
+              "stress_ucb": 334.05636959609967
+            },
+            {
+              "generation": 39,
+              "movement": 0.5121868870385864,
+              "convergence": 6.276050506685019e-06,
+              "loss": 0.9478300923926122,
+              "stress_mean": 41.131687069131274,
+              "stress_ucb": 333.36206549972763
+            },
+            {
+              "generation": 40,
+              "movement": 0.32288623987374687,
+              "convergence": 6.665019673930111e-06,
+              "loss": 0.9055323007284,
+              "stress_mean": 41.150251138934934,
+              "stress_ucb": 333.3806295695313
+            },
+            {
+              "generation": 41,
+              "movement": 0.3395276134807649,
+              "convergence": 6.661100266073642e-06,
+              "loss": 0.9007827999180662,
+              "stress_mean": 36.6746802865042,
+              "stress_ucb": 328.9050587171006
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.0001103700501962971,
+              "loss": 0.9007827999180662,
+              "stress_mean": 36.6746802865042,
+              "stress_ucb": 328.9050587171006
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.00010888863197133813,
+              "loss": 0.9007827999180662,
+              "stress_mean": 36.6746802865042,
+              "stress_ucb": 328.9050587171006
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.00010799104906241924,
+              "loss": 0.9007827999180662,
+              "stress_mean": 36.6746802865042,
+              "stress_ucb": 328.9050587171006
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.00010337465945218119,
+              "loss": 0.9007827999180662,
+              "stress_mean": 36.6746802865042,
+              "stress_ucb": 328.9050587171006
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.0001023518689816861,
+              "loss": 0.9007827999180662,
+              "stress_mean": 36.6746802865042,
+              "stress_ucb": 328.9050587171006
+            },
+            {
+              "generation": 47,
+              "movement": 0.2521586878859044,
+              "convergence": 0.00010010979029116653,
+              "loss": 0.8906296795566526,
+              "stress_mean": 39.81201161786121,
+              "stress_ucb": 332.0423900484576
+            },
+            {
+              "generation": 48,
+              "movement": 0.4444444444444445,
+              "convergence": 0.0006833759449100205,
+              "loss": 0.7904772273540751,
+              "stress_mean": 40.828502030031004,
+              "stress_ucb": 333.0588804606274
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.000728923510682086,
+              "loss": 0.7904772273540751,
+              "stress_mean": 40.828502030031004,
+              "stress_ucb": 333.0588804606274
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.0007248394553199287,
+              "loss": 0.7904772273540751,
+              "stress_mean": 40.828502030031004,
+              "stress_ucb": 333.0588804606274
+            }
+          ]
+        },
+        {
+          "label": "global_2",
+          "seed": 20975503,
+          "score": 0.8575673936131991,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 7.313770600852186e-05,
+              "loss": 2.179174142064178,
+              "stress_mean": 40.215751596583786,
+              "stress_ucb": 332.4461300271802
+            },
+            {
+              "generation": 2,
+              "movement": 0.6566292027487741,
+              "convergence": 6.248108075816663e-05,
+              "loss": 1.658289417936081,
+              "stress_mean": 39.31153304014885,
+              "stress_ucb": 331.5419114707452
+            },
+            {
+              "generation": 3,
+              "movement": 0.3707504690964377,
+              "convergence": 6.069017122363055e-05,
+              "loss": 1.657661005906093,
+              "stress_mean": 39.460572275015934,
+              "stress_ucb": 331.6909507056123
+            },
+            {
+              "generation": 4,
+              "movement": 0.0,
+              "convergence": 5.6723692545761765e-05,
+              "loss": 1.657661005906093,
+              "stress_mean": 39.460572275015934,
+              "stress_ucb": 331.6909507056123
+            },
+            {
+              "generation": 5,
+              "movement": 0.0,
+              "convergence": 5.446242609052996e-05,
+              "loss": 1.657661005906093,
+              "stress_mean": 39.460572275015934,
+              "stress_ucb": 331.6909507056123
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 4.6563980343747195e-05,
+              "loss": 1.657661005906093,
+              "stress_mean": 39.460572275015934,
+              "stress_ucb": 331.6909507056123
+            },
+            {
+              "generation": 7,
+              "movement": 0.7296780218449372,
+              "convergence": 5.331871577424529e-05,
+              "loss": 1.5262258329886502,
+              "stress_mean": 37.52265335272991,
+              "stress_ucb": 329.75303178332626
+            },
+            {
+              "generation": 8,
+              "movement": 0.6048797454969215,
+              "convergence": 3.873490673118056e-05,
+              "loss": 1.187454716782225,
+              "stress_mean": 37.86615830466746,
+              "stress_ucb": 330.09653673526384
+            },
+            {
+              "generation": 9,
+              "movement": 0.0,
+              "convergence": 4.753806044487146e-05,
+              "loss": 1.187454716782225,
+              "stress_mean": 37.86615830466746,
+              "stress_ucb": 330.09653673526384
+            },
+            {
+              "generation": 10,
+              "movement": 0.4111119843917309,
+              "convergence": 4.2562605229372936e-05,
+              "loss": 1.1792401978489695,
+              "stress_mean": 38.58033120950707,
+              "stress_ucb": 330.8107096401034
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 4.1047633001293386e-05,
+              "loss": 1.1792401978489695,
+              "stress_mean": 38.58033120950707,
+              "stress_ucb": 330.8107096401034
+            },
+            {
+              "generation": 12,
+              "movement": 0.4666013633133198,
+              "convergence": 3.3634491135092106e-05,
+              "loss": 1.1041967919430073,
+              "stress_mean": 39.147444952089934,
+              "stress_ucb": 331.8843939655496
+            },
+            {
+              "generation": 13,
+              "movement": 0.28475843473980533,
+              "convergence": 3.0820269177893055e-05,
+              "loss": 1.066067811906413,
+              "stress_mean": 42.331570242906025,
+              "stress_ucb": 334.5619486735024
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 2.856605822324996e-05,
+              "loss": 1.066067811906413,
+              "stress_mean": 42.331570242906025,
+              "stress_ucb": 334.5619486735024
+            },
+            {
+              "generation": 15,
+              "movement": 0.5,
+              "convergence": 2.6087196913045673e-05,
+              "loss": 1.0159445507539033,
+              "stress_mean": 39.53410352500004,
+              "stress_ucb": 331.7644819555964
+            },
+            {
+              "generation": 16,
+              "movement": 0.0,
+              "convergence": 2.267300933771764e-05,
+              "loss": 1.0159445507539033,
+              "stress_mean": 39.53410352500004,
+              "stress_ucb": 331.7644819555964
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 2.266415619260066e-05,
+              "loss": 1.0159445507539033,
+              "stress_mean": 39.53410352500004,
+              "stress_ucb": 331.7644819555964
+            },
+            {
+              "generation": 18,
+              "movement": 0.24854028734518965,
+              "convergence": 2.196544881859229e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 2.193319129183883e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 2.1822476149740078e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 21,
+              "movement": 0.0,
+              "convergence": 2.146076286440997e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 2.123578127353826e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 2.0966545776924328e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 24,
+              "movement": 0.0,
+              "convergence": 1.9920560613938626e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 25,
+              "movement": 0.0,
+              "convergence": 1.6829866345287448e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 1.6713659108425608e-05,
+              "loss": 0.9330096479970553,
+              "stress_mean": 37.715982164163684,
+              "stress_ucb": 329.94636059476005
+            },
+            {
+              "generation": 27,
+              "movement": 0.3001433392289088,
+              "convergence": 1.570755854741597e-05,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 28,
+              "movement": 0.0,
+              "convergence": 1.5711734673717277e-05,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 29,
+              "movement": 0.0,
+              "convergence": 1.4408314012975866e-05,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 1.4385177218516104e-05,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 1.43733205914005e-05,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 1.1590729684469174e-05,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 7.921222946410478e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 7.921178834146574e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 8.245147089723041e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 6.4409127123594215e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 6.44047373585891e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 38,
+              "movement": 0.0,
+              "convergence": 6.303961893257518e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 6.30331543029436e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 6.30275689783862e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 6.302450072966968e-06,
+              "loss": 0.8666000984772804,
+              "stress_mean": 42.12670695964254,
+              "stress_ucb": 334.3570853902389
+            },
+            {
+              "generation": 42,
+              "movement": 0.2222222222222222,
+              "convergence": 0.0007546707362967253,
+              "loss": 0.8613880722952444,
+              "stress_mean": 40.47376196295902,
+              "stress_ucb": 332.7041403935554
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.0007915085316445644,
+              "loss": 0.8613880722952444,
+              "stress_mean": 40.47376196295902,
+              "stress_ucb": 332.7041403935554
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0008380993069505272,
+              "loss": 0.8613880722952444,
+              "stress_mean": 40.47376196295902,
+              "stress_ucb": 332.7041403935554
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.0008364636081009522,
+              "loss": 0.8613880722952444,
+              "stress_mean": 40.47376196295902,
+              "stress_ucb": 332.7041403935554
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.0008693462587961789,
+              "loss": 0.8613880722952444,
+              "stress_mean": 40.47376196295902,
+              "stress_ucb": 332.7041403935554
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.000892630853985418,
+              "loss": 0.8613880722952444,
+              "stress_mean": 40.47376196295902,
+              "stress_ucb": 332.7041403935554
+            },
+            {
+              "generation": 48,
+              "movement": 0.3055835695445607,
+              "convergence": 0.0008703584941361032,
+              "loss": 0.8575673936131991,
+              "stress_mean": 42.62273168883057,
+              "stress_ucb": 334.85311011942696
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.0008807215389221175,
+              "loss": 0.8575673936131991,
+              "stress_mean": 42.62273168883057,
+              "stress_ucb": 334.85311011942696
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.0008874596235258011,
+              "loss": 0.8575673936131991,
+              "stress_mean": 42.62273168883057,
+              "stress_ucb": 334.85311011942696
+            }
+          ]
+        },
+        {
+          "label": "global_3",
+          "seed": 20975504,
+          "score": 0.8083662494998463,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 7.859402282389417e-05,
+              "loss": 1.9161613789655654,
+              "stress_mean": 41.78568196842482,
+              "stress_ucb": 334.01606039902117
+            },
+            {
+              "generation": 2,
+              "movement": 0.6306636308863112,
+              "convergence": 6.674801709783651e-05,
+              "loss": 1.7617340177768215,
+              "stress_mean": 36.36999543810698,
+              "stress_ucb": 328.60037386870334
+            },
+            {
+              "generation": 3,
+              "movement": 0.5,
+              "convergence": 5.883771108916418e-05,
+              "loss": 1.5522535451229396,
+              "stress_mean": 33.02134051569761,
+              "stress_ucb": 325.251718946294
+            },
+            {
+              "generation": 4,
+              "movement": 0.9514472594103488,
+              "convergence": 5.6066804208947234e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 5,
+              "movement": 0.0,
+              "convergence": 4.9107803616850794e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 4.005352114294283e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 7,
+              "movement": 0.0,
+              "convergence": 5.162243935040996e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 8,
+              "movement": 0.0,
+              "convergence": 4.760563774239572e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 9,
+              "movement": 0.0,
+              "convergence": 4.3299823093786115e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 10,
+              "movement": 0.0,
+              "convergence": 3.9466248772286216e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 4.4297179810396424e-05,
+              "loss": 1.252846814601223,
+              "stress_mean": 41.28638949583767,
+              "stress_ucb": 333.51676792643406
+            },
+            {
+              "generation": 12,
+              "movement": 0.5557193709354487,
+              "convergence": 4.083163050979363e-05,
+              "loss": 1.0329735558361075,
+              "stress_mean": 35.383933616408484,
+              "stress_ucb": 327.6143120470049
+            },
+            {
+              "generation": 13,
+              "movement": 0.0,
+              "convergence": 3.727478591057413e-05,
+              "loss": 1.0329735558361075,
+              "stress_mean": 35.383933616408484,
+              "stress_ucb": 327.6143120470049
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 3.114523257505367e-05,
+              "loss": 1.0329735558361075,
+              "stress_mean": 35.383933616408484,
+              "stress_ucb": 327.6143120470049
+            },
+            {
+              "generation": 15,
+              "movement": 0.3710584662983202,
+              "convergence": 2.6714915044342502e-05,
+              "loss": 1.0231180705168905,
+              "stress_mean": 37.82546711286639,
+              "stress_ucb": 330.05584554346274
+            },
+            {
+              "generation": 16,
+              "movement": 0.0,
+              "convergence": 2.5129182061153083e-05,
+              "loss": 1.0231180705168905,
+              "stress_mean": 37.82546711286639,
+              "stress_ucb": 330.05584554346274
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 2.115189429025054e-05,
+              "loss": 1.0231180705168905,
+              "stress_mean": 37.82546711286639,
+              "stress_ucb": 330.05584554346274
+            },
+            {
+              "generation": 18,
+              "movement": 0.0,
+              "convergence": 1.896841519314602e-05,
+              "loss": 1.0231180705168905,
+              "stress_mean": 37.82546711286639,
+              "stress_ucb": 330.05584554346274
+            },
+            {
+              "generation": 19,
+              "movement": 0.6106482075473683,
+              "convergence": 1.615217297107325e-05,
+              "loss": 0.9767026776758079,
+              "stress_mean": 42.560301949066826,
+              "stress_ucb": 334.7906803796632
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 1.495408564364333e-05,
+              "loss": 0.9767026776758079,
+              "stress_mean": 42.560301949066826,
+              "stress_ucb": 334.7906803796632
+            },
+            {
+              "generation": 21,
+              "movement": 0.0,
+              "convergence": 1.4784594951601398e-05,
+              "loss": 0.9767026776758079,
+              "stress_mean": 42.560301949066826,
+              "stress_ucb": 334.7906803796632
+            },
+            {
+              "generation": 22,
+              "movement": 0.49337322194027555,
+              "convergence": 1.3821044859012017e-05,
+              "loss": 0.9472913200338813,
+              "stress_mean": 42.12668551539111,
+              "stress_ucb": 334.3570639459875
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 1.179471688849428e-05,
+              "loss": 0.9472913200338813,
+              "stress_mean": 42.12668551539111,
+              "stress_ucb": 334.3570639459875
+            },
+            {
+              "generation": 24,
+              "movement": 0.0,
+              "convergence": 1.0569632603988156e-05,
+              "loss": 0.9472913200338813,
+              "stress_mean": 42.12668551539111,
+              "stress_ucb": 334.3570639459875
+            },
+            {
+              "generation": 25,
+              "movement": 0.3298618562811874,
+              "convergence": 9.214057215281192e-06,
+              "loss": 0.9331452343421243,
+              "stress_mean": 40.60388887353282,
+              "stress_ucb": 332.8342673041292
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 1.4213715832575855e-05,
+              "loss": 0.9331452343421243,
+              "stress_mean": 40.60388887353282,
+              "stress_ucb": 332.8342673041292
+            },
+            {
+              "generation": 27,
+              "movement": 0.21635305879082578,
+              "convergence": 1.0633597653596778e-05,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 28,
+              "movement": 0.0,
+              "convergence": 9.869580936123717e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 29,
+              "movement": 0.0,
+              "convergence": 8.730313672289123e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 8.103987641283616e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 8.656134376776668e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 9.803747272830889e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 9.336997197738451e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 9.563456022215818e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 9.546114100116587e-06,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.0006240874328990809,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 0.0006416490048287949,
+              "loss": 0.8638072940529665,
+              "stress_mean": 38.6056948121038,
+              "stress_ucb": 330.8360732427002
+            },
+            {
+              "generation": 38,
+              "movement": 0.29644543121457956,
+              "convergence": 0.0006306153301833111,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 0.0006328294885722792,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.0006327986654183379,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.0006392535283073602,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.0006730196762862367,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.0006860313521125513,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0006876633830624502,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.000683256071409693,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.0007123244364291844,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.0007186924088382761,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 48,
+              "movement": 0.0,
+              "convergence": 0.0007568793265116863,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.000791827245321101,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.0007997647816835179,
+              "loss": 0.8083662494998463,
+              "stress_mean": 42.650458190018085,
+              "stress_ucb": 334.88083662061445
+            }
+          ]
+        }
+      ],
+      "perturbation_cycles": [
+        {
+          "cycle": 1,
+          "improved": true,
+          "trials": [
+            {
+              "label": "perturb_1_1",
+              "score": 0.7274610342149335,
+              "return_distance": 0.09090909090909083,
+              "loss_delta": -0.06301619313914164,
+              "stable": false
+            },
+            {
+              "label": "perturb_1_2",
+              "score": 0.7279709808159072,
+              "return_distance": 0.09090909090909083,
+              "loss_delta": -0.06250624653816794,
+              "stable": false
+            },
+            {
+              "label": "perturb_1_3",
+              "score": 0.7296522230227453,
+              "return_distance": 0.09090909090909083,
+              "loss_delta": -0.06082500433132976,
+              "stable": false
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "improved": true,
+          "trials": [
+            {
+              "label": "perturb_2_1",
+              "score": 0.6989836659461038,
+              "return_distance": 0.049440328680099066,
+              "loss_delta": -0.028477368268829628,
+              "stable": false
+            },
+            {
+              "label": "perturb_2_2",
+              "score": 0.6953053976674647,
+              "return_distance": 0.04843286817176753,
+              "loss_delta": -0.03215563654746878,
+              "stable": false
+            },
+            {
+              "label": "perturb_2_3",
+              "score": 0.6979751503401855,
+              "return_distance": 0.04841939737094991,
+              "loss_delta": -0.02948588387474793,
+              "stable": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "max_endurance",
+      "selected_origin": "optimized_conservative",
+      "fallback_dataset_row": null,
+      "official_loss": 0.5124749033148894,
+      "stress_mean_mpa": 41.60531799569235,
+      "stress_uncertainty_mpa": 55.32784467051369,
+      "stress_ucb_mpa": 333.83569642628873,
+      "stress_limit_mpa": 335.0,
+      "gate_high_probability": 0.02,
+      "low_expert_stress_mpa": 33.79015904152803,
+      "high_expert_stress_mpa": 424.5481067497444,
+      "source": "optimized_conservative",
+      "pool_size": 86778,
+      "conservative_pool_count": 54147,
+      "global_searches": [
+        {
+          "label": "global_1",
+          "seed": 20510295,
+          "score": 0.5338461816310698,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 3.917844994631491e-05,
+              "loss": 1.2834560309476566,
+              "stress_mean": 24.40625349180815,
+              "stress_ucb": 328.3522829119284
+            },
+            {
+              "generation": 2,
+              "movement": 0.0,
+              "convergence": 4.006007587674862e-05,
+              "loss": 1.2834560309476566,
+              "stress_mean": 24.40625349180815,
+              "stress_ucb": 328.3522829119284
+            },
+            {
+              "generation": 3,
+              "movement": 0.0,
+              "convergence": 3.2839621825970586e-05,
+              "loss": 1.2834560309476566,
+              "stress_mean": 24.40625349180815,
+              "stress_ucb": 328.3522829119284
+            },
+            {
+              "generation": 4,
+              "movement": 0.8482884600126503,
+              "convergence": 3.249391145244235e-05,
+              "loss": 1.0811694751758187,
+              "stress_mean": 29.19138473631751,
+              "stress_ucb": 321.4217631669139
+            },
+            {
+              "generation": 5,
+              "movement": 0.5015006876389432,
+              "convergence": 2.8451313809324886e-05,
+              "loss": 1.025882579573178,
+              "stress_mean": 28.963532188728358,
+              "stress_ucb": 321.19391061932475
+            },
+            {
+              "generation": 6,
+              "movement": 0.5454545454545454,
+              "convergence": 2.0722894850490205e-05,
+              "loss": 0.9939756638009546,
+              "stress_mean": 25.78584278933524,
+              "stress_ucb": 318.0162212199316
+            },
+            {
+              "generation": 7,
+              "movement": 0.47225489865647907,
+              "convergence": 2.6629768490669062e-05,
+              "loss": 0.9506782339878299,
+              "stress_mean": 23.931800155013264,
+              "stress_ucb": 316.16217858560964
+            },
+            {
+              "generation": 8,
+              "movement": 0.6790913080137593,
+              "convergence": 2.38513388665249e-05,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 9,
+              "movement": 0.0,
+              "convergence": 2.14483129571672e-05,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 10,
+              "movement": 0.0,
+              "convergence": 1.754511980926754e-05,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 1.4663432006092158e-05,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 12,
+              "movement": 0.0,
+              "convergence": 1.3304223366414096e-05,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 13,
+              "movement": 0.0,
+              "convergence": 6.933586716011289e-06,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 6.267687999373652e-06,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 15,
+              "movement": 0.0,
+              "convergence": 6.2674280978517205e-06,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 16,
+              "movement": 0.0,
+              "convergence": 6.267190809888591e-06,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 0.000428282643090876,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 18,
+              "movement": 0.0,
+              "convergence": 0.00042517441291628434,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 0.000431435302829593,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 0.0004461047141451199,
+              "loss": 0.7385420479857141,
+              "stress_mean": 37.4596875309107,
+              "stress_ucb": 329.69006596150706
+            },
+            {
+              "generation": 21,
+              "movement": 0.6446682400684831,
+              "convergence": 0.0004599663910804373,
+              "loss": 0.6566363412280372,
+              "stress_mean": 35.28939691400295,
+              "stress_ucb": 327.51977534459934
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 0.000442997492018271,
+              "loss": 0.6566363412280372,
+              "stress_mean": 35.28939691400295,
+              "stress_ucb": 327.51977534459934
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 0.0004536589092732629,
+              "loss": 0.6566363412280372,
+              "stress_mean": 35.28939691400295,
+              "stress_ucb": 327.51977534459934
+            },
+            {
+              "generation": 24,
+              "movement": 0.3284173996586647,
+              "convergence": 0.0004450098338453247,
+              "loss": 0.6461866268243144,
+              "stress_mean": 29.63169679223146,
+              "stress_ucb": 321.86207522282785
+            },
+            {
+              "generation": 25,
+              "movement": 0.7710772388749577,
+              "convergence": 0.00044809817899626667,
+              "loss": 0.6461220737025843,
+              "stress_mean": 37.21055604982834,
+              "stress_ucb": 329.44093448042474
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 0.0004642584999888075,
+              "loss": 0.6461220737025843,
+              "stress_mean": 37.21055604982834,
+              "stress_ucb": 329.44093448042474
+            },
+            {
+              "generation": 27,
+              "movement": 0.0,
+              "convergence": 0.0004503976558303655,
+              "loss": 0.6461220737025843,
+              "stress_mean": 37.21055604982834,
+              "stress_ucb": 329.44093448042474
+            },
+            {
+              "generation": 28,
+              "movement": 0.7089424153506902,
+              "convergence": 0.0004654218349023327,
+              "loss": 0.6425674769154681,
+              "stress_mean": 37.83422993921735,
+              "stress_ucb": 330.06460836981375
+            },
+            {
+              "generation": 29,
+              "movement": 0.6162673256414553,
+              "convergence": 0.0004604541061962738,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 0.0004899822685210395,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 0.0005531873844436577,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 0.0005892486323486979,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 0.0006242546169285079,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 0.0006128402991090228,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 0.0006516414852553004,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.0006880271581082935,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 0.0007345220241306712,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 38,
+              "movement": 0.0,
+              "convergence": 0.000776987118061547,
+              "loss": 0.5855090557231138,
+              "stress_mean": 35.02766834054705,
+              "stress_ucb": 327.2580467711434
+            },
+            {
+              "generation": 39,
+              "movement": 0.3343443859819135,
+              "convergence": 0.0008168430172662537,
+              "loss": 0.5607237243799519,
+              "stress_mean": 42.63209385117744,
+              "stress_ucb": 334.8624722817738
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.0008184933874029283,
+              "loss": 0.5607237243799519,
+              "stress_mean": 42.63209385117744,
+              "stress_ucb": 334.8624722817738
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.0008539520760129227,
+              "loss": 0.5607237243799519,
+              "stress_mean": 42.63209385117744,
+              "stress_ucb": 334.8624722817738
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.0008892381131431218,
+              "loss": 0.5607237243799519,
+              "stress_mean": 42.63209385117744,
+              "stress_ucb": 334.8624722817738
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.0009122918183145879,
+              "loss": 0.5607237243799519,
+              "stress_mean": 42.63209385117744,
+              "stress_ucb": 334.8624722817738
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0010212691145730843,
+              "loss": 0.5607237243799519,
+              "stress_mean": 42.63209385117744,
+              "stress_ucb": 334.8624722817738
+            },
+            {
+              "generation": 45,
+              "movement": 0.3410166573278721,
+              "convergence": 0.0010250441157072206,
+              "loss": 0.5412002179112423,
+              "stress_mean": 39.00881931474411,
+              "stress_ucb": 331.2391977453405
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.0010126628170397318,
+              "loss": 0.5412002179112423,
+              "stress_mean": 39.00881931474411,
+              "stress_ucb": 331.2391977453405
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.0010364217553184792,
+              "loss": 0.5412002179112423,
+              "stress_mean": 39.00881931474411,
+              "stress_ucb": 331.2391977453405
+            },
+            {
+              "generation": 48,
+              "movement": 0.132654295528004,
+              "convergence": 0.0010671118586538277,
+              "loss": 0.5365783748896981,
+              "stress_mean": 38.33305389513047,
+              "stress_ucb": 330.56343232572686
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.001104338947445529,
+              "loss": 0.5365783748896981,
+              "stress_mean": 38.33305389513047,
+              "stress_ucb": 330.56343232572686
+            },
+            {
+              "generation": 50,
+              "movement": 0.8174152334959786,
+              "convergence": 0.0011489731061166274,
+              "loss": 0.5338461816310698,
+              "stress_mean": 41.86189876069439,
+              "stress_ucb": 334.09227719129075
+            }
+          ]
+        },
+        {
+          "label": "global_2",
+          "seed": 20510296,
+          "score": 0.5353839659633209,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 4.273893982029118e-05,
+              "loss": 1.3340363310873071,
+              "stress_mean": 34.483642461306765,
+              "stress_ucb": 326.71402089190315
+            },
+            {
+              "generation": 2,
+              "movement": 0.3626016449648613,
+              "convergence": 3.468813932656221e-05,
+              "loss": 1.2277910653667032,
+              "stress_mean": 28.269297343794378,
+              "stress_ucb": 324.26590492700745
+            },
+            {
+              "generation": 3,
+              "movement": 0.9367640700729322,
+              "convergence": 3.3433152595228876e-05,
+              "loss": 0.9792154563044561,
+              "stress_mean": 30.243977071307974,
+              "stress_ucb": 322.47435550190437
+            },
+            {
+              "generation": 4,
+              "movement": 0.0,
+              "convergence": 2.911377710159589e-05,
+              "loss": 0.9792154563044561,
+              "stress_mean": 30.243977071307974,
+              "stress_ucb": 322.47435550190437
+            },
+            {
+              "generation": 5,
+              "movement": 0.0,
+              "convergence": 2.4988352234757602e-05,
+              "loss": 0.9792154563044561,
+              "stress_mean": 30.243977071307974,
+              "stress_ucb": 322.47435550190437
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 2.1853438821957276e-05,
+              "loss": 0.9792154563044561,
+              "stress_mean": 30.243977071307974,
+              "stress_ucb": 322.47435550190437
+            },
+            {
+              "generation": 7,
+              "movement": 0.46569174724370627,
+              "convergence": 1.845659150006257e-05,
+              "loss": 0.8422101377642199,
+              "stress_mean": 29.8181555603335,
+              "stress_ucb": 322.04853399092985
+            },
+            {
+              "generation": 8,
+              "movement": 0.0,
+              "convergence": 1.3870312876292624e-05,
+              "loss": 0.8422101377642199,
+              "stress_mean": 29.8181555603335,
+              "stress_ucb": 322.04853399092985
+            },
+            {
+              "generation": 9,
+              "movement": 0.6933536433841934,
+              "convergence": 1.069920411254801e-05,
+              "loss": 0.8348002343983116,
+              "stress_mean": 35.34050436412685,
+              "stress_ucb": 327.5708827947232
+            },
+            {
+              "generation": 10,
+              "movement": 0.34453927220324265,
+              "convergence": 7.2793307684912e-06,
+              "loss": 0.7881666476493145,
+              "stress_mean": 30.9349833607317,
+              "stress_ucb": 323.16536179132805
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 7.218053770213373e-06,
+              "loss": 0.7881666476493145,
+              "stress_mean": 30.9349833607317,
+              "stress_ucb": 323.16536179132805
+            },
+            {
+              "generation": 12,
+              "movement": 0.0,
+              "convergence": 7.0494619806177095e-06,
+              "loss": 0.7881666476493145,
+              "stress_mean": 30.9349833607317,
+              "stress_ucb": 323.16536179132805
+            },
+            {
+              "generation": 13,
+              "movement": 0.6363636363636365,
+              "convergence": 7.559164029959471e-06,
+              "loss": 0.7344226695418947,
+              "stress_mean": 38.144359155265875,
+              "stress_ucb": 330.37473758586225
+            },
+            {
+              "generation": 14,
+              "movement": 0.6363636363636365,
+              "convergence": 7.558928494133641e-06,
+              "loss": 0.7101600032661594,
+              "stress_mean": 32.96972197585742,
+              "stress_ucb": 325.20010040645377
+            },
+            {
+              "generation": 15,
+              "movement": 0.0,
+              "convergence": 8.506404082032125e-06,
+              "loss": 0.7101600032661594,
+              "stress_mean": 32.96972197585742,
+              "stress_ucb": 325.20010040645377
+            },
+            {
+              "generation": 16,
+              "movement": 0.33333333333333337,
+              "convergence": 8.637466668616343e-06,
+              "loss": 0.6979632799524405,
+              "stress_mean": 35.04768109814698,
+              "stress_ucb": 327.27805952874337
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 8.634962608879887e-06,
+              "loss": 0.6979632799524405,
+              "stress_mean": 35.04768109814698,
+              "stress_ucb": 327.27805952874337
+            },
+            {
+              "generation": 18,
+              "movement": 0.36863199924820333,
+              "convergence": 6.348218675951035e-06,
+              "loss": 0.6643427241783976,
+              "stress_mean": 30.959416198997282,
+              "stress_ucb": 323.1897946295937
+            },
+            {
+              "generation": 19,
+              "movement": 0.25697414672992913,
+              "convergence": 0.00039857815948845664,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 0.00042810583472889817,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 21,
+              "movement": 0.0,
+              "convergence": 0.00047892211774863545,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 0.0005095772746754885,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 0.0005179643086056521,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 24,
+              "movement": 0.0,
+              "convergence": 0.0005399178970535607,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 25,
+              "movement": 0.0,
+              "convergence": 0.000577665647051153,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 0.0006326497257081534,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 27,
+              "movement": 0.0,
+              "convergence": 0.0006724756264683171,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 28,
+              "movement": 0.0,
+              "convergence": 0.0006865945060149356,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 29,
+              "movement": 0.0,
+              "convergence": 0.0007069733517233803,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 0.000765866487160819,
+              "loss": 0.5847344723022703,
+              "stress_mean": 40.38522461940987,
+              "stress_ucb": 332.61560305000626
+            },
+            {
+              "generation": 31,
+              "movement": 0.4187078870239607,
+              "convergence": 0.0007919452069376548,
+              "loss": 0.5648622477705209,
+              "stress_mean": 38.22848438429034,
+              "stress_ucb": 330.45886281488674
+            },
+            {
+              "generation": 32,
+              "movement": 0.25,
+              "convergence": 0.0007974143981015002,
+              "loss": 0.559976274391893,
+              "stress_mean": 41.33686764357989,
+              "stress_ucb": 333.5672460741763
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 0.0008072885705336481,
+              "loss": 0.559976274391893,
+              "stress_mean": 41.33686764357989,
+              "stress_ucb": 333.5672460741763
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 0.0008171400702092484,
+              "loss": 0.559976274391893,
+              "stress_mean": 41.33686764357989,
+              "stress_ucb": 333.5672460741763
+            },
+            {
+              "generation": 35,
+              "movement": 0.3004828767941268,
+              "convergence": 0.0008294423064282439,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.0009116769112519874,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 0.000903638322143094,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 38,
+              "movement": 0.0,
+              "convergence": 0.0009179774698591921,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 0.0009315309998059692,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.001035732836581092,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.0010806548551801946,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.001119255169669778,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.0011591776581598267,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0011770364742957561,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.001247464140470589,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.001340149232937779,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.0014010661226722453,
+              "loss": 0.5405932855938216,
+              "stress_mean": 39.516557204460874,
+              "stress_ucb": 331.74693563505724
+            },
+            {
+              "generation": 48,
+              "movement": 0.6238783029455558,
+              "convergence": 0.0014396809617010003,
+              "loss": 0.5353839659633209,
+              "stress_mean": 39.08205565962085,
+              "stress_ucb": 331.3124340902172
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.0014925172464290827,
+              "loss": 0.5353839659633209,
+              "stress_mean": 39.08205565962085,
+              "stress_ucb": 331.3124340902172
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.0015208327554135357,
+              "loss": 0.5353839659633209,
+              "stress_mean": 39.08205565962085,
+              "stress_ucb": 331.3124340902172
+            }
+          ]
+        },
+        {
+          "label": "global_3",
+          "seed": 20510297,
+          "score": 0.584780563426352,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 3.8918973114110616e-05,
+              "loss": 1.3921395048646512,
+              "stress_mean": 33.03176954641431,
+              "stress_ucb": 325.26214797701067
+            },
+            {
+              "generation": 2,
+              "movement": 1.0,
+              "convergence": 4.024733268258543e-05,
+              "loss": 1.1204943470135205,
+              "stress_mean": 34.68040478578822,
+              "stress_ucb": 326.9107832163846
+            },
+            {
+              "generation": 3,
+              "movement": 0.8684846509841121,
+              "convergence": 4.030033356817831e-05,
+              "loss": 1.0449836659053247,
+              "stress_mean": 31.849499978011455,
+              "stress_ucb": 324.07987840860784
+            },
+            {
+              "generation": 4,
+              "movement": 0.0,
+              "convergence": 3.3335157989431784e-05,
+              "loss": 1.0449836659053247,
+              "stress_mean": 31.849499978011455,
+              "stress_ucb": 324.07987840860784
+            },
+            {
+              "generation": 5,
+              "movement": 0.0,
+              "convergence": 3.230716637339765e-05,
+              "loss": 1.0449836659053247,
+              "stress_mean": 31.849499978011455,
+              "stress_ucb": 324.07987840860784
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 2.905593326887549e-05,
+              "loss": 1.0449836659053247,
+              "stress_mean": 31.849499978011455,
+              "stress_ucb": 324.07987840860784
+            },
+            {
+              "generation": 7,
+              "movement": 0.5177070595361617,
+              "convergence": 2.1789646692215902e-05,
+              "loss": 1.003430142158267,
+              "stress_mean": 29.135925492229354,
+              "stress_ucb": 321.36630392282575
+            },
+            {
+              "generation": 8,
+              "movement": 0.7815144489197969,
+              "convergence": 1.990958914212101e-05,
+              "loss": 0.9390118612359473,
+              "stress_mean": 39.30402471983243,
+              "stress_ucb": 331.53440315042883
+            },
+            {
+              "generation": 9,
+              "movement": 0.7723404893696689,
+              "convergence": 1.7069873890957044e-05,
+              "loss": 0.8606174524898393,
+              "stress_mean": 34.333743289393674,
+              "stress_ucb": 334.23731416593785
+            },
+            {
+              "generation": 10,
+              "movement": 0.44543695194147853,
+              "convergence": 1.4974008166640056e-05,
+              "loss": 0.8199258723015269,
+              "stress_mean": 33.80250445767432,
+              "stress_ucb": 326.0328828882707
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 1.2302571659899341e-05,
+              "loss": 0.8199258723015269,
+              "stress_mean": 33.80250445767432,
+              "stress_ucb": 326.0328828882707
+            },
+            {
+              "generation": 12,
+              "movement": 0.0,
+              "convergence": 1.1974901210277952e-05,
+              "loss": 0.8199258723015269,
+              "stress_mean": 33.80250445767432,
+              "stress_ucb": 326.0328828882707
+            },
+            {
+              "generation": 13,
+              "movement": 0.5509065385317435,
+              "convergence": 6.83409936523126e-06,
+              "loss": 0.7471390397812343,
+              "stress_mean": 28.013342501238675,
+              "stress_ucb": 320.24372093183507
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 6.8287149282494515e-06,
+              "loss": 0.7471390397812343,
+              "stress_mean": 28.013342501238675,
+              "stress_ucb": 320.24372093183507
+            },
+            {
+              "generation": 15,
+              "movement": 0.4982751287960133,
+              "convergence": 6.823154495663122e-06,
+              "loss": 0.71609171637695,
+              "stress_mean": 37.34486228600937,
+              "stress_ucb": 329.5752407166058
+            },
+            {
+              "generation": 16,
+              "movement": 0.5984626290795902,
+              "convergence": 7.891781097031413e-06,
+              "loss": 0.7100981573822345,
+              "stress_mean": 33.640387847188876,
+              "stress_ucb": 325.87076627778526
+            },
+            {
+              "generation": 17,
+              "movement": 0.7145673651203754,
+              "convergence": 7.80837747138137e-06,
+              "loss": 0.6913334216930894,
+              "stress_mean": 40.15078956732218,
+              "stress_ucb": 332.38116799791857
+            },
+            {
+              "generation": 18,
+              "movement": 0.0,
+              "convergence": 7.77823279310964e-06,
+              "loss": 0.6913334216930894,
+              "stress_mean": 40.15078956732218,
+              "stress_ucb": 332.38116799791857
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 7.741158756677405e-06,
+              "loss": 0.6913334216930894,
+              "stress_mean": 40.15078956732218,
+              "stress_ucb": 332.38116799791857
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 0.0004569989451137861,
+              "loss": 0.6913334216930894,
+              "stress_mean": 40.15078956732218,
+              "stress_ucb": 332.38116799791857
+            },
+            {
+              "generation": 21,
+              "movement": 0.4545454545454546,
+              "convergence": 0.00045600216430608247,
+              "loss": 0.6825138416091574,
+              "stress_mean": 34.12538433535832,
+              "stress_ucb": 326.3557627659547
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 0.00047895092292323373,
+              "loss": 0.6825138416091574,
+              "stress_mean": 34.12538433535832,
+              "stress_ucb": 326.3557627659547
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 0.0005230826466652411,
+              "loss": 0.6825138416091574,
+              "stress_mean": 34.12538433535832,
+              "stress_ucb": 326.3557627659547
+            },
+            {
+              "generation": 24,
+              "movement": 0.0,
+              "convergence": 0.0005395960364432307,
+              "loss": 0.6825138416091574,
+              "stress_mean": 34.12538433535832,
+              "stress_ucb": 326.3557627659547
+            },
+            {
+              "generation": 25,
+              "movement": 0.5507264898454842,
+              "convergence": 0.0005493335194966954,
+              "loss": 0.6352609951173844,
+              "stress_mean": 39.18741618376136,
+              "stress_ucb": 331.4177946143577
+            },
+            {
+              "generation": 26,
+              "movement": 0.469066556536416,
+              "convergence": 0.0005470501989785623,
+              "loss": 0.6272498549016075,
+              "stress_mean": 38.83208377997844,
+              "stress_ucb": 331.06246221057484
+            },
+            {
+              "generation": 27,
+              "movement": 0.0,
+              "convergence": 0.0005772386040218582,
+              "loss": 0.6272498549016075,
+              "stress_mean": 38.83208377997844,
+              "stress_ucb": 331.06246221057484
+            },
+            {
+              "generation": 28,
+              "movement": 0.0,
+              "convergence": 0.0005929395997322928,
+              "loss": 0.6272498549016075,
+              "stress_mean": 38.83208377997844,
+              "stress_ucb": 331.06246221057484
+            },
+            {
+              "generation": 29,
+              "movement": 0.3265650003897037,
+              "convergence": 0.0006025866072528148,
+              "loss": 0.6047334519866485,
+              "stress_mean": 36.952387539277865,
+              "stress_ucb": 329.18276596987425
+            },
+            {
+              "generation": 30,
+              "movement": 0.47325751210274414,
+              "convergence": 0.0006191579195630726,
+              "loss": 0.6027254213201481,
+              "stress_mean": 41.65498096976243,
+              "stress_ucb": 333.8853594003588
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 0.0006446351870999178,
+              "loss": 0.6027254213201481,
+              "stress_mean": 41.65498096976243,
+              "stress_ucb": 333.8853594003588
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 0.0006545047662957235,
+              "loss": 0.6027254213201481,
+              "stress_mean": 41.65498096976243,
+              "stress_ucb": 333.8853594003588
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 0.0006465707238974023,
+              "loss": 0.6027254213201481,
+              "stress_mean": 41.65498096976243,
+              "stress_ucb": 333.8853594003588
+            },
+            {
+              "generation": 34,
+              "movement": 0.5684744379519296,
+              "convergence": 0.0006506448569335744,
+              "loss": 0.593754320214997,
+              "stress_mean": 33.24186111615856,
+              "stress_ucb": 325.47223954675496
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 0.0006402163778779043,
+              "loss": 0.593754320214997,
+              "stress_mean": 33.24186111615856,
+              "stress_ucb": 325.47223954675496
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.0006588155415558714,
+              "loss": 0.593754320214997,
+              "stress_mean": 33.24186111615856,
+              "stress_ucb": 325.47223954675496
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 0.0006587746238585246,
+              "loss": 0.593754320214997,
+              "stress_mean": 33.24186111615856,
+              "stress_ucb": 325.47223954675496
+            },
+            {
+              "generation": 38,
+              "movement": 0.8300321212209056,
+              "convergence": 0.000658210141720268,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 0.0006818745427923078,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.000701482505296446,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.0007282886668254106,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.0007409215477048121,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.000771844905292629,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0008257062776918739,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.0008214019364933974,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.0008643813144652606,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.0009146798456223541,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 48,
+              "movement": 0.0,
+              "convergence": 0.0009024907597461635,
+              "loss": 0.5923286437883549,
+              "stress_mean": 36.24696705927361,
+              "stress_ucb": 328.47734548987
+            },
+            {
+              "generation": 49,
+              "movement": 0.6761398149740616,
+              "convergence": 0.0009234320158219062,
+              "loss": 0.5889145527079582,
+              "stress_mean": 39.06873073826242,
+              "stress_ucb": 331.29910916885876
+            },
+            {
+              "generation": 50,
+              "movement": 0.4355070471774974,
+              "convergence": 0.0009682201440369536,
+              "loss": 0.584780563426352,
+              "stress_mean": 38.89527446653301,
+              "stress_ucb": 331.1256528971294
+            }
+          ]
+        }
+      ],
+      "perturbation_cycles": [
+        {
+          "cycle": 1,
+          "improved": true,
+          "trials": [
+            {
+              "label": "perturb_1_1",
+              "score": 0.5194356646969085,
+              "return_distance": 0.04964083622864357,
+              "loss_delta": -0.014410516934161177,
+              "stable": false
+            },
+            {
+              "label": "perturb_1_2",
+              "score": 0.5195360341241028,
+              "return_distance": 0.04859661150805106,
+              "loss_delta": -0.01431014750696702,
+              "stable": false
+            },
+            {
+              "label": "perturb_1_3",
+              "score": 0.520101495044958,
+              "return_distance": 0.09090909090909094,
+              "loss_delta": -0.01374468658611172,
+              "stable": false
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "improved": true,
+          "trials": [
+            {
+              "label": "perturb_2_1",
+              "score": 0.5151056215192575,
+              "return_distance": 0.09090909090909094,
+              "loss_delta": -0.004330043177651066,
+              "stable": false
+            },
+            {
+              "label": "perturb_2_2",
+              "score": 0.5154162988376112,
+              "return_distance": 0.04924160376464193,
+              "loss_delta": -0.004019365859297186,
+              "stable": false
+            },
+            {
+              "label": "perturb_2_3",
+              "score": 0.5124749033148894,
+              "return_distance": 0.09090909090909094,
+              "loss_delta": -0.006960761382019176,
+              "stable": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "max_capacity",
+      "selected_origin": "optimized_conservative",
+      "fallback_dataset_row": null,
+      "official_loss": 2.034711518312918,
+      "stress_mean_mpa": 42.51989064885134,
+      "stress_uncertainty_mpa": 66.9339938997969,
+      "stress_ucb_mpa": 334.7502690794477,
+      "stress_limit_mpa": 335.0,
+      "gate_high_probability": 0.02,
+      "low_expert_stress_mpa": 33.19481117934918,
+      "high_expert_stress_mpa": 499.4487846544569,
+      "source": "optimized_conservative",
+      "pool_size": 86778,
+      "conservative_pool_count": 10122,
+      "global_searches": [
+        {
+          "label": "global_1",
+          "seed": 20410467,
+          "score": 2936.1786076890594,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 0.00010402228559083747,
+              "loss": 2.585785750693424,
+              "stress_mean": 95.25908211517054,
+              "stress_ucb": 387.4894605457669
+            },
+            {
+              "generation": 2,
+              "movement": 0.8764752733965884,
+              "convergence": 9.275950405535576e-05,
+              "loss": 2.275970343248644,
+              "stress_mean": 79.97372143688386,
+              "stress_ucb": 372.20409986748024
+            },
+            {
+              "generation": 3,
+              "movement": 0.527465101448064,
+              "convergence": 8.349794891341204e-05,
+              "loss": 3.1182323060962984,
+              "stress_mean": 65.65818504341233,
+              "stress_ucb": 357.8885634740087
+            },
+            {
+              "generation": 4,
+              "movement": 0.632990605747209,
+              "convergence": 9.584487698587423e-05,
+              "loss": 2.4279607616002834,
+              "stress_mean": 65.0124309058248,
+              "stress_ucb": 357.24280933642115
+            },
+            {
+              "generation": 5,
+              "movement": 0.5509324350965226,
+              "convergence": 0.00011307413102392318,
+              "loss": 2.466299165305001,
+              "stress_mean": 60.15140223370081,
+              "stress_ucb": 352.3817806642972
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 0.00011185393316277949,
+              "loss": 2.466299165305001,
+              "stress_mean": 60.15140223370081,
+              "stress_ucb": 352.3817806642972
+            },
+            {
+              "generation": 7,
+              "movement": 0.0,
+              "convergence": 0.00010226060597374457,
+              "loss": 2.466299165305001,
+              "stress_mean": 60.15140223370081,
+              "stress_ucb": 352.3817806642972
+            },
+            {
+              "generation": 8,
+              "movement": 0.5581561079989793,
+              "convergence": 9.427297293090305e-05,
+              "loss": 3.048094679243215,
+              "stress_mean": 57.25154666847571,
+              "stress_ucb": 349.4819250990721
+            },
+            {
+              "generation": 9,
+              "movement": 0.6451418408188702,
+              "convergence": 9.017407281360007e-05,
+              "loss": 3.7198513564348046,
+              "stress_mean": 55.26140229784208,
+              "stress_ucb": 347.49178072843847
+            },
+            {
+              "generation": 10,
+              "movement": 0.0,
+              "convergence": 8.770016118119167e-05,
+              "loss": 3.7198513564348046,
+              "stress_mean": 55.26140229784208,
+              "stress_ucb": 347.49178072843847
+            },
+            {
+              "generation": 11,
+              "movement": 0.5034635401134081,
+              "convergence": 8.034916913737819e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 12,
+              "movement": 0.0,
+              "convergence": 7.110428270077898e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 13,
+              "movement": 0.0,
+              "convergence": 6.773977915032127e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 5.957550060150407e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 15,
+              "movement": 0.0,
+              "convergence": 5.24216394602129e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 16,
+              "movement": 0.0,
+              "convergence": 4.714954098265653e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 4.9800341560152595e-05,
+              "loss": 2.315836008060529,
+              "stress_mean": 52.091404862899125,
+              "stress_ucb": 344.3217832934955
+            },
+            {
+              "generation": 18,
+              "movement": 0.2222222222222222,
+              "convergence": 4.6058081756012765e-05,
+              "loss": 2.289225771732939,
+              "stress_mean": 50.50378480374558,
+              "stress_ucb": 342.73416323434196
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 5.357811322489307e-05,
+              "loss": 2.289225771732939,
+              "stress_mean": 50.50378480374558,
+              "stress_ucb": 342.73416323434196
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 0.0001151700285534645,
+              "loss": 2.289225771732939,
+              "stress_mean": 50.50378480374558,
+              "stress_ucb": 342.73416323434196
+            },
+            {
+              "generation": 21,
+              "movement": 0.0,
+              "convergence": 0.000113150411201966,
+              "loss": 2.289225771732939,
+              "stress_mean": 50.50378480374558,
+              "stress_ucb": 342.73416323434196
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 0.00011780093643037937,
+              "loss": 2.289225771732939,
+              "stress_mean": 50.50378480374558,
+              "stress_ucb": 342.73416323434196
+            },
+            {
+              "generation": 23,
+              "movement": 0.3188019541553307,
+              "convergence": 0.00014991407681242343,
+              "loss": 2.0200525452999125,
+              "stress_mean": 49.6865759749958,
+              "stress_ucb": 341.91695440559215
+            },
+            {
+              "generation": 24,
+              "movement": 0.0,
+              "convergence": 0.0001481203818242897,
+              "loss": 2.0200525452999125,
+              "stress_mean": 49.6865759749958,
+              "stress_ucb": 341.91695440559215
+            },
+            {
+              "generation": 25,
+              "movement": 0.0,
+              "convergence": 0.00015936664151579476,
+              "loss": 2.0200525452999125,
+              "stress_mean": 49.6865759749958,
+              "stress_ucb": 341.91695440559215
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 0.00015647505544973106,
+              "loss": 2.0200525452999125,
+              "stress_mean": 49.6865759749958,
+              "stress_ucb": 341.91695440559215
+            },
+            {
+              "generation": 27,
+              "movement": 0.0,
+              "convergence": 0.00016108668091090918,
+              "loss": 2.0200525452999125,
+              "stress_mean": 49.6865759749958,
+              "stress_ucb": 341.91695440559215
+            },
+            {
+              "generation": 28,
+              "movement": 0.4352694564904842,
+              "convergence": 0.0001596820728351182,
+              "loss": 2.1176628779272386,
+              "stress_mean": 48.99628259693468,
+              "stress_ucb": 341.22666102753107
+            },
+            {
+              "generation": 29,
+              "movement": 0.3316627705751397,
+              "convergence": 0.00015389202277428496,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 0.00015370732063745365,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 0.0001511054565112117,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 0.00015125314509483378,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 0.00014903351165054587,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 0.00014874673199245997,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 0.00014915688953004026,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.00014837604690940166,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 0.00014579004125230265,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 38,
+              "movement": 0.0,
+              "convergence": 0.00014604290649061668,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 0.00014554584678489496,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.00014763950044187961,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.00014804992020555241,
+              "loss": 2.062800668633402,
+              "stress_mean": 45.054529750869314,
+              "stress_ucb": 337.2849081814657
+            },
+            {
+              "generation": 42,
+              "movement": 0.4894826627945133,
+              "convergence": 0.00014417680520516482,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.00014170963334049507,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.00014486196170322292,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.0001457584318767472,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.00014687149104286888,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.00015031413909256987,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 48,
+              "movement": 0.0,
+              "convergence": 0.0001492531988453018,
+              "loss": 2.5062400729813064,
+              "stress_mean": 44.735471779857974,
+              "stress_ucb": 336.96585021045433
+            },
+            {
+              "generation": 49,
+              "movement": 0.4545454545454546,
+              "convergence": 0.00014797794925927306,
+              "loss": 2.31440587281945,
+              "stress_mean": 43.85292470367702,
+              "stress_ucb": 336.08330313427336
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.0001459710687957613,
+              "loss": 2.31440587281945,
+              "stress_mean": 43.85292470367702,
+              "stress_ucb": 336.08330313427336
+            }
+          ]
+        },
+        {
+          "label": "global_2",
+          "seed": 20410468,
+          "score": 53264.707890705635,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 0.00012219644424462165,
+              "loss": 2.2594085586598394,
+              "stress_mean": 73.11407511754362,
+              "stress_ucb": 365.34445354814
+            },
+            {
+              "generation": 2,
+              "movement": 0.5079063112270665,
+              "convergence": 0.00010724567053635617,
+              "loss": 2.9393620561628198,
+              "stress_mean": 68.84262941695768,
+              "stress_ucb": 364.9793052494773
+            },
+            {
+              "generation": 3,
+              "movement": 0.6968043049950365,
+              "convergence": 9.775661367119294e-05,
+              "loss": 2.865048175025485,
+              "stress_mean": 68.66939075101507,
+              "stress_ucb": 360.8997691816114
+            },
+            {
+              "generation": 4,
+              "movement": 0.8237393523486357,
+              "convergence": 9.515162215366848e-05,
+              "loss": 2.9605484695730024,
+              "stress_mean": 62.12474983058901,
+              "stress_ucb": 354.7411641555542
+            },
+            {
+              "generation": 5,
+              "movement": 0.0,
+              "convergence": 0.00010674222130171106,
+              "loss": 2.9605484695730024,
+              "stress_mean": 62.12474983058901,
+              "stress_ucb": 354.7411641555542
+            },
+            {
+              "generation": 6,
+              "movement": 0.2797900936146813,
+              "convergence": 0.00010009896968604126,
+              "loss": 2.2126117228463507,
+              "stress_mean": 55.32574406161672,
+              "stress_ucb": 347.5561224922131
+            },
+            {
+              "generation": 7,
+              "movement": 0.0,
+              "convergence": 0.00010560802041014612,
+              "loss": 2.2126117228463507,
+              "stress_mean": 55.32574406161672,
+              "stress_ucb": 347.5561224922131
+            },
+            {
+              "generation": 8,
+              "movement": 0.0,
+              "convergence": 0.00010167059121977208,
+              "loss": 2.2126117228463507,
+              "stress_mean": 55.32574406161672,
+              "stress_ucb": 347.5561224922131
+            },
+            {
+              "generation": 9,
+              "movement": 0.0,
+              "convergence": 8.733023530956658e-05,
+              "loss": 2.2126117228463507,
+              "stress_mean": 55.32574406161672,
+              "stress_ucb": 347.5561224922131
+            },
+            {
+              "generation": 10,
+              "movement": 0.3874654538110828,
+              "convergence": 7.527686158368096e-05,
+              "loss": 2.664966115604732,
+              "stress_mean": 54.615590373540776,
+              "stress_ucb": 346.84596880413716
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 7.013677302673008e-05,
+              "loss": 2.664966115604732,
+              "stress_mean": 54.615590373540776,
+              "stress_ucb": 346.84596880413716
+            },
+            {
+              "generation": 12,
+              "movement": 0.3981413493882578,
+              "convergence": 6.436724205857462e-05,
+              "loss": 2.871107741971997,
+              "stress_mean": 52.687400263992764,
+              "stress_ucb": 344.9177786945891
+            },
+            {
+              "generation": 13,
+              "movement": 0.0,
+              "convergence": 5.5129952680615074e-05,
+              "loss": 2.871107741971997,
+              "stress_mean": 52.687400263992764,
+              "stress_ucb": 344.9177786945891
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 5.3501113269506914e-05,
+              "loss": 2.871107741971997,
+              "stress_mean": 52.687400263992764,
+              "stress_ucb": 344.9177786945891
+            },
+            {
+              "generation": 15,
+              "movement": 0.0,
+              "convergence": 4.92089755222167e-05,
+              "loss": 2.871107741971997,
+              "stress_mean": 52.687400263992764,
+              "stress_ucb": 344.9177786945891
+            },
+            {
+              "generation": 16,
+              "movement": 0.7272727272727273,
+              "convergence": 4.986568863336951e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 5.3415877916571515e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 18,
+              "movement": 0.0,
+              "convergence": 6.412200143076552e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 6.653531045517128e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 20,
+              "movement": 0.0,
+              "convergence": 7.664267266482482e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 21,
+              "movement": 0.0,
+              "convergence": 7.411945153161726e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 7.798076947145198e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 7.732569587442259e-05,
+              "loss": 2.5151357100181526,
+              "stress_mean": 49.94057237193347,
+              "stress_ucb": 342.17095080252983
+            },
+            {
+              "generation": 24,
+              "movement": 0.28354173910095926,
+              "convergence": 7.422619740434545e-05,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 25,
+              "movement": 0.0,
+              "convergence": 9.158873174424935e-05,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 9.235095973698435e-05,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 27,
+              "movement": 0.0,
+              "convergence": 9.384299016830259e-05,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 28,
+              "movement": 0.0,
+              "convergence": 9.258287124091694e-05,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 29,
+              "movement": 0.0,
+              "convergence": 0.00010596944369062527,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 0.00010853088520266908,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 0.00010751570141699544,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 0.00011392968441321153,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 0.00011215433353098266,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 0.0001260963207610634,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 0.00013920061124514805,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.0001448564177311183,
+              "loss": 2.0423940154992066,
+              "stress_mean": 48.327600912051494,
+              "stress_ucb": 340.55797934264785
+            },
+            {
+              "generation": 37,
+              "movement": 0.21818628106969729,
+              "convergence": 0.00013999996723236243,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 38,
+              "movement": 0.0,
+              "convergence": 0.0001375507607600234,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 0.00014208955717741207,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.00014187065646235588,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.00014298647619957232,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.0001406741817655574,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.00013940258278667813,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0001380787482433763,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.0001387983865270659,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.00013724613171413615,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.00013633884004230854,
+              "loss": 1.8315481586932105,
+              "stress_mean": 48.323997535394895,
+              "stress_ucb": 340.55437596599126
+            },
+            {
+              "generation": 48,
+              "movement": 0.22174889211665094,
+              "convergence": 0.00013540160462004812,
+              "loss": 1.8579109334946116,
+              "stress_mean": 47.385370695158734,
+              "stress_ucb": 339.6157491257551
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.0001376112217717389,
+              "loss": 1.8579109334946116,
+              "stress_mean": 47.385370695158734,
+              "stress_ucb": 339.6157491257551
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.00013759050944983384,
+              "loss": 1.8579109334946116,
+              "stress_mean": 47.385370695158734,
+              "stress_ucb": 339.6157491257551
+            }
+          ]
+        },
+        {
+          "label": "global_3",
+          "seed": 20410469,
+          "score": 109557.54008316145,
+          "history": [
+            {
+              "generation": 1,
+              "movement": null,
+              "convergence": 0.00010394273498948887,
+              "loss": 2.346421182086412,
+              "stress_mean": 65.67366534962167,
+              "stress_ucb": 381.8315575464622
+            },
+            {
+              "generation": 2,
+              "movement": 0.5134029490876018,
+              "convergence": 0.00010370009899668089,
+              "loss": 2.522910356017452,
+              "stress_mean": 66.54947964944431,
+              "stress_ucb": 358.7798580800407
+            },
+            {
+              "generation": 3,
+              "movement": 0.40675308134532134,
+              "convergence": 9.336169644372107e-05,
+              "loss": 3.007891226675479,
+              "stress_mean": 64.46689086092658,
+              "stress_ucb": 356.69726929152296
+            },
+            {
+              "generation": 4,
+              "movement": 0.0,
+              "convergence": 8.44229319893573e-05,
+              "loss": 3.007891226675479,
+              "stress_mean": 64.46689086092658,
+              "stress_ucb": 356.69726929152296
+            },
+            {
+              "generation": 5,
+              "movement": 0.5094174053077118,
+              "convergence": 8.933401985081164e-05,
+              "loss": 2.500718782518284,
+              "stress_mean": 63.402377565717536,
+              "stress_ucb": 355.6327559963139
+            },
+            {
+              "generation": 6,
+              "movement": 0.0,
+              "convergence": 9.854584243617776e-05,
+              "loss": 2.500718782518284,
+              "stress_mean": 63.402377565717536,
+              "stress_ucb": 355.6327559963139
+            },
+            {
+              "generation": 7,
+              "movement": 0.0,
+              "convergence": 8.589812363684234e-05,
+              "loss": 2.500718782518284,
+              "stress_mean": 63.402377565717536,
+              "stress_ucb": 355.6327559963139
+            },
+            {
+              "generation": 8,
+              "movement": 0.0,
+              "convergence": 7.71360041802676e-05,
+              "loss": 2.500718782518284,
+              "stress_mean": 63.402377565717536,
+              "stress_ucb": 355.6327559963139
+            },
+            {
+              "generation": 9,
+              "movement": 0.0,
+              "convergence": 8.228402427642405e-05,
+              "loss": 2.500718782518284,
+              "stress_mean": 63.402377565717536,
+              "stress_ucb": 355.6327559963139
+            },
+            {
+              "generation": 10,
+              "movement": 0.7597351262856498,
+              "convergence": 6.513041317275708e-05,
+              "loss": 2.776216168869333,
+              "stress_mean": 60.078450100228295,
+              "stress_ucb": 352.30882853082466
+            },
+            {
+              "generation": 11,
+              "movement": 0.0,
+              "convergence": 6.25053068092263e-05,
+              "loss": 2.776216168869333,
+              "stress_mean": 60.078450100228295,
+              "stress_ucb": 352.30882853082466
+            },
+            {
+              "generation": 12,
+              "movement": 0.0,
+              "convergence": 5.9107909370587616e-05,
+              "loss": 2.776216168869333,
+              "stress_mean": 60.078450100228295,
+              "stress_ucb": 352.30882853082466
+            },
+            {
+              "generation": 13,
+              "movement": 0.43708199367823075,
+              "convergence": 5.4380331123990265e-05,
+              "loss": 3.13406338605861,
+              "stress_mean": 58.96287799124855,
+              "stress_ucb": 351.1932564218449
+            },
+            {
+              "generation": 14,
+              "movement": 0.0,
+              "convergence": 5.193345954319516e-05,
+              "loss": 3.13406338605861,
+              "stress_mean": 58.96287799124855,
+              "stress_ucb": 351.1932564218449
+            },
+            {
+              "generation": 15,
+              "movement": 0.2502165245925448,
+              "convergence": 5.081224117450391e-05,
+              "loss": 2.553787279827702,
+              "stress_mean": 58.766940110341906,
+              "stress_ucb": 350.9973185409383
+            },
+            {
+              "generation": 16,
+              "movement": 0.45418542616446766,
+              "convergence": 5.116805325725263e-05,
+              "loss": 3.243229568370636,
+              "stress_mean": 56.2960013078034,
+              "stress_ucb": 348.5263797383998
+            },
+            {
+              "generation": 17,
+              "movement": 0.0,
+              "convergence": 5.014862220490093e-05,
+              "loss": 3.243229568370636,
+              "stress_mean": 56.2960013078034,
+              "stress_ucb": 348.5263797383998
+            },
+            {
+              "generation": 18,
+              "movement": 0.0,
+              "convergence": 4.8519855714718235e-05,
+              "loss": 3.243229568370636,
+              "stress_mean": 56.2960013078034,
+              "stress_ucb": 348.5263797383998
+            },
+            {
+              "generation": 19,
+              "movement": 0.0,
+              "convergence": 4.918552613168712e-05,
+              "loss": 3.243229568370636,
+              "stress_mean": 56.2960013078034,
+              "stress_ucb": 348.5263797383998
+            },
+            {
+              "generation": 20,
+              "movement": 0.5454545454545454,
+              "convergence": 4.680733982873268e-05,
+              "loss": 2.046410145758814,
+              "stress_mean": 55.25297897386277,
+              "stress_ucb": 347.7648399387706
+            },
+            {
+              "generation": 21,
+              "movement": 0.5454545454545454,
+              "convergence": 4.58141289867746e-05,
+              "loss": 2.4122546909164333,
+              "stress_mean": 53.94637707803554,
+              "stress_ucb": 346.1767555086319
+            },
+            {
+              "generation": 22,
+              "movement": 0.0,
+              "convergence": 4.630314478254476e-05,
+              "loss": 2.4122546909164333,
+              "stress_mean": 53.94637707803554,
+              "stress_ucb": 346.1767555086319
+            },
+            {
+              "generation": 23,
+              "movement": 0.0,
+              "convergence": 0.00017260493019771508,
+              "loss": 2.4122546909164333,
+              "stress_mean": 53.94637707803554,
+              "stress_ucb": 346.1767555086319
+            },
+            {
+              "generation": 24,
+              "movement": 0.6853505274684313,
+              "convergence": 0.00017901473596328862,
+              "loss": 3.1557531398070924,
+              "stress_mean": 52.94270458565628,
+              "stress_ucb": 345.17308301625263
+            },
+            {
+              "generation": 25,
+              "movement": 0.0,
+              "convergence": 0.00017828766496171032,
+              "loss": 3.1557531398070924,
+              "stress_mean": 52.94270458565628,
+              "stress_ucb": 345.17308301625263
+            },
+            {
+              "generation": 26,
+              "movement": 0.0,
+              "convergence": 0.00017485961295036028,
+              "loss": 3.1557531398070924,
+              "stress_mean": 52.94270458565628,
+              "stress_ucb": 345.17308301625263
+            },
+            {
+              "generation": 27,
+              "movement": 0.2829736749388442,
+              "convergence": 0.00017347711698533877,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 28,
+              "movement": 0.0,
+              "convergence": 0.000173297958076444,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 29,
+              "movement": 0.0,
+              "convergence": 0.00017203892202811565,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 30,
+              "movement": 0.0,
+              "convergence": 0.00017104176490297912,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 31,
+              "movement": 0.0,
+              "convergence": 0.00016729053428413956,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 32,
+              "movement": 0.0,
+              "convergence": 0.00016623199703602213,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 33,
+              "movement": 0.0,
+              "convergence": 0.00016259905987344516,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 34,
+              "movement": 0.0,
+              "convergence": 0.0001604620031948596,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 35,
+              "movement": 0.0,
+              "convergence": 0.0001594940930632069,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 36,
+              "movement": 0.0,
+              "convergence": 0.000155992680785596,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 37,
+              "movement": 0.0,
+              "convergence": 0.00015792279393413324,
+              "loss": 3.452041601745082,
+              "stress_mean": 50.31394285377377,
+              "stress_ucb": 342.54432128437014
+            },
+            {
+              "generation": 38,
+              "movement": 0.23645944601751995,
+              "convergence": 0.00015359215294698808,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 39,
+              "movement": 0.0,
+              "convergence": 0.00015471826424439745,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 40,
+              "movement": 0.0,
+              "convergence": 0.00015355620512509945,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 41,
+              "movement": 0.0,
+              "convergence": 0.00015315064742320878,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 42,
+              "movement": 0.0,
+              "convergence": 0.0001530513817393157,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 43,
+              "movement": 0.0,
+              "convergence": 0.00015261958350781392,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 44,
+              "movement": 0.0,
+              "convergence": 0.0001526557572079282,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 45,
+              "movement": 0.0,
+              "convergence": 0.00015179491086973355,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 46,
+              "movement": 0.0,
+              "convergence": 0.00015268837881588616,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 47,
+              "movement": 0.0,
+              "convergence": 0.0001526711728581225,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 48,
+              "movement": 0.0,
+              "convergence": 0.00015859698910811293,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 49,
+              "movement": 0.0,
+              "convergence": 0.0001580714385391014,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            },
+            {
+              "generation": 50,
+              "movement": 0.0,
+              "convergence": 0.00015556602526521103,
+              "loss": 3.466747975944077,
+              "stress_mean": 49.38941230129796,
+              "stress_ucb": 341.61979073189434
+            }
+          ]
+        }
+      ],
+      "perturbation_cycles": [
+        {
+          "cycle": 1,
+          "improved": true,
+          "trials": [
+            {
+              "label": "perturb_1_1",
+              "score": 2.1470493002622146,
+              "return_distance": 0.0495641145080703,
+              "loss_delta": -0.1673565725572348,
+              "stable": false
+            },
+            {
+              "label": "perturb_1_2",
+              "score": 2.148230266329043,
+              "return_distance": 0.04958003585400306,
+              "loss_delta": -0.1661756064904072,
+              "stable": false
+            },
+            {
+              "label": "perturb_1_3",
+              "score": 2.152506071955517,
+              "return_distance": 0.04959270005615435,
+              "loss_delta": -0.1618998008639334,
+              "stable": false
+            }
+          ]
+        },
+        {
+          "cycle": 2,
+          "improved": true,
+          "trials": [
+            {
+              "label": "perturb_2_1",
+              "score": 2.034711518312918,
+              "return_distance": 0.0499873739115943,
+              "loss_delta": -0.112337781949297,
+              "stable": false
+            },
+            {
+              "label": "perturb_2_2",
+              "score": 2.0362417269406765,
+              "return_distance": 0.04980396879846516,
+              "loss_delta": -0.11080757332153857,
+              "stable": false
+            },
+            {
+              "label": "perturb_2_3",
+              "score": 2.0389427348408398,
+              "return_distance": 0.04940462444467503,
+              "loss_delta": -0.10810656542137531,
+              "stable": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

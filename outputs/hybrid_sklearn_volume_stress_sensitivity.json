@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "measurement": "optimizer-reported local response to independent volume-target perturbations",
+  "perturbation_fraction": 0.1,
+  "cases": [
+    {
+      "case_id": "high_speed_dash",
+      "name": "High Speed Dash",
+      "baseline": {
+        "metrics": {
+          "empty_mass_kg": 162.572768979013,
+          "ld": 5.837781263391044,
+          "payload_volume_m3": 0.3977342131733557,
+          "fuel_volume_m3": 0.1895860137478386,
+          "max_hotspot_stress_mpa": 98.86090131036887
+        },
+        "stress_status": "PASS",
+        "stress_reason": null
+      },
+      "payload": {
+        "target_field": "payload_volume_min_m3",
+        "baseline_target_m3": 0.75,
+        "minus_target_m3": 0.675,
+        "plus_target_m3": 0.8250000000000001,
+        "minus": {
+          "metrics": {
+            "empty_mass_kg": 132.65367183469357,
+            "ld": 6.532181805730703,
+            "payload_volume_m3": 0.33907267927538315,
+            "fuel_volume_m3": 0.26612925766944945,
+            "max_hotspot_stress_mpa": 92.17424591976247
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "plus": {
+          "metrics": {
+            "empty_mass_kg": 101.01890206307773,
+            "ld": 6.564818784579795,
+            "payload_volume_m3": 0.36756302275002484,
+            "fuel_volume_m3": 0.21726901479152155,
+            "max_hotspot_stress_mpa": 88.62801290658687
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "stress_delta_minus_mpa": -6.686655390606404,
+        "stress_delta_plus_mpa": -10.232888403781999,
+        "central_stress_sensitivity_mpa_per_m3": -23.641553421170627
+      },
+      "fuel": {
+        "target_field": "fuel_volume_min_m3",
+        "baseline_target_m3": 0.45,
+        "minus_target_m3": 0.405,
+        "plus_target_m3": 0.49500000000000005,
+        "minus": {
+          "metrics": {
+            "empty_mass_kg": 112.7440037826834,
+            "ld": 5.9848774802197795,
+            "payload_volume_m3": 0.3584934768846723,
+            "fuel_volume_m3": 0.19601731863712926,
+            "max_hotspot_stress_mpa": 70.17025409430761
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "plus": {
+          "metrics": {
+            "empty_mass_kg": 138.54719511045562,
+            "ld": 6.3510930608873615,
+            "payload_volume_m3": 0.3048239655598698,
+            "fuel_volume_m3": 0.2035343572908854,
+            "max_hotspot_stress_mpa": 86.10032222367663
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "stress_delta_minus_mpa": -28.690647216061265,
+        "stress_delta_plus_mpa": -12.760579086692246,
+        "central_stress_sensitivity_mpa_per_m3": 177.00075699298907
+      }
+    },
+    {
+      "case_id": "max_endurance",
+      "name": "Max Endurance",
+      "baseline": {
+        "metrics": {
+          "empty_mass_kg": 51.544129581954245,
+          "ld": 7.422852728722846,
+          "payload_volume_m3": 0.7246590532641554,
+          "fuel_volume_m3": 0.3622437539610231,
+          "max_hotspot_stress_mpa": 109.12029394535737
+        },
+        "stress_status": "PASS",
+        "stress_reason": null
+      },
+      "payload": {
+        "target_field": "payload_volume_min_m3",
+        "baseline_target_m3": 0.8,
+        "minus_target_m3": 0.7200000000000001,
+        "plus_target_m3": 0.8800000000000001,
+        "minus": {
+          "metrics": {
+            "empty_mass_kg": 55.194048840209966,
+            "ld": 7.47881154307171,
+            "payload_volume_m3": 0.6453367754647333,
+            "fuel_volume_m3": 0.38065642035153274,
+            "max_hotspot_stress_mpa": 125.21638474450769
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "plus": {
+          "metrics": {
+            "empty_mass_kg": 47.04785484840178,
+            "ld": 7.439508200099085,
+            "payload_volume_m3": 0.7171128879919368,
+            "fuel_volume_m3": 0.31301187562091315,
+            "max_hotspot_stress_mpa": 58.84649572752716
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "stress_delta_minus_mpa": 16.096090799150318,
+        "stress_delta_plus_mpa": -50.27379821783021,
+        "central_stress_sensitivity_mpa_per_m3": -414.81180635612816
+      },
+      "fuel": {
+        "target_field": "fuel_volume_min_m3",
+        "baseline_target_m3": 0.45,
+        "minus_target_m3": 0.405,
+        "plus_target_m3": 0.49500000000000005,
+        "minus": {
+          "metrics": {
+            "empty_mass_kg": 51.544129581954245,
+            "ld": 7.422852728722846,
+            "payload_volume_m3": 0.7246590532641554,
+            "fuel_volume_m3": 0.3622437539610231,
+            "max_hotspot_stress_mpa": 109.12029394535737
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "plus": {
+          "metrics": {
+            "empty_mass_kg": 50.9132823764922,
+            "ld": 7.34825793499161,
+            "payload_volume_m3": 0.6629124348700746,
+            "fuel_volume_m3": 0.326990764605692,
+            "max_hotspot_stress_mpa": 99.39266963724835
+          },
+          "stress_status": "PASS",
+          "stress_reason": null
+        },
+        "stress_delta_minus_mpa": 0.0,
+        "stress_delta_plus_mpa": -9.727624308109029,
+        "central_stress_sensitivity_mpa_per_m3": -108.08471453454474
+      }
+    },
+    {
+      "case_id": "max_capacity",
+      "name": "Max Capacity",
+      "baseline": {
+        "metrics": {
+          "empty_mass_kg": 59.65521371712636,
+          "ld": 15.132497299465241,
+          "payload_volume_m3": 0.8017392960064633,
+          "fuel_volume_m3": 0.43551734611212056,
+          "max_hotspot_stress_mpa": 748.8668119315321
+        },
+        "stress_status": "FAIL",
+        "stress_reason": "stress 748.867 MPa exceeds 335 MPa"
+      },
+      "payload": {
+        "target_field": "payload_volume_min_m3",
+        "baseline_target_m3": 1.0,
+        "minus_target_m3": 0.9,
+        "plus_target_m3": 1.1,
+        "minus": {
+          "metrics": {
+            "empty_mass_kg": 59.65521371712636,
+            "ld": 15.132497299465241,
+            "payload_volume_m3": 0.8017392960064633,
+            "fuel_volume_m3": 0.43551734611212056,
+            "max_hotspot_stress_mpa": 748.8668119315321
+          },
+          "stress_status": "FAIL",
+          "stress_reason": "stress 748.867 MPa exceeds 335 MPa"
+        },
+        "plus": {
+          "metrics": {
+            "empty_mass_kg": 59.65521371712636,
+            "ld": 15.132497299465241,
+            "payload_volume_m3": 0.8017392960064633,
+            "fuel_volume_m3": 0.43551734611212056,
+            "max_hotspot_stress_mpa": 748.8668119315321
+          },
+          "stress_status": "FAIL",
+          "stress_reason": "stress 748.867 MPa exceeds 335 MPa"
+        },
+        "stress_delta_minus_mpa": 0.0,
+        "stress_delta_plus_mpa": 0.0,
+        "central_stress_sensitivity_mpa_per_m3": 0.0
+      },
+      "fuel": {
+        "target_field": "fuel_volume_min_m3",
+        "baseline_target_m3": 0.65,
+        "minus_target_m3": 0.5850000000000001,
+        "plus_target_m3": 0.7150000000000001,
+        "minus": {
+          "metrics": {
+            "empty_mass_kg": 59.65521371712636,
+            "ld": 15.132497299465241,
+            "payload_volume_m3": 0.8017392960064633,
+            "fuel_volume_m3": 0.43551734611212056,
+            "max_hotspot_stress_mpa": 748.8668119315321
+          },
+          "stress_status": "FAIL",
+          "stress_reason": "stress 748.867 MPa exceeds 335 MPa"
+        },
+        "plus": {
+          "metrics": {
+            "empty_mass_kg": 59.65521371712636,
+            "ld": 15.132497299465241,
+            "payload_volume_m3": 0.8017392960064633,
+            "fuel_volume_m3": 0.43551734611212056,
+            "max_hotspot_stress_mpa": 748.8668119315321
+          },
+          "stress_status": "FAIL",
+          "stress_reason": "stress 748.867 MPa exceeds 335 MPa"
+        },
+        "stress_delta_minus_mpa": 0.0,
+        "stress_delta_plus_mpa": 0.0,
+        "central_stress_sensitivity_mpa_per_m3": 0.0
+      }
+    }
+  ]
+}
