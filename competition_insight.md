@@ -34,24 +34,14 @@ project:
 - `data/bwb_structures_dataset.csv` — structural training data used to fit the
   mass, volume, and stress surrogates.
 - `models/ld_surrogate/` — the provided L/D predictor imported by the notebook.
-- `gauntlet/runnable_cases.json` — the three machine-readable mission inputs.
-- `ntop_model/` — the supplied parameterized nTop model; it is part of the
-  competition material even though the notebook does not call nTop directly.
 
 The notebook creates `outputs/` automatically if it is missing. Existing files
 inside that directory can be replaced when the notebook is rerun, so keep any
 prior results separately if they need to be retained.
 
-## 2. The gauntlet
+## 2. Built-in mission cases
 
-The `gauntlet/` directory is a lightweight evaluation harness for exercising an
-optimizer against a consistent set of mission profiles. It exists to make the
-input/output contract explicit and to support repeatable checks outside an
-interactive notebook.
-
-### Mission cases
-
-`gauntlet/runnable_cases.json` contains the three competition missions:
+The notebook defines the three competition missions directly:
 
 | Case | L/D target | Payload target | Fuel target | Flight condition |
 |---|---:|---:|---:|---|
@@ -61,21 +51,6 @@ interactive notebook.
 
 All three cases use a 335 MPa maximum-hotspot-stress limit. Stress is the hard
 constraint; L/D and the two volume values are soft targets used in the loss.
-
-### Robustness check
-
-`gauntlet/robustness_check.py` is intended for a command-line optimizer that
-accepts `--cases` and `--output` arguments. For each base mission it creates
-five scenarios: the baseline, payload target −10% and +10%, and fuel target
-−10% and +10%. It then measures the change in optimizer-reported stress and
-calculates centered stress sensitivities in MPa/m³.
-
-The robustness utility does **not necessarily work with this version of the
-optimizer**. `coupled_stress_optimization.ipynb` is an interactive notebook,
-not a command-line target, and the current checkout does not include the
-gauntlet scoring helper that `robustness_check.py` imports. The main notebook
-still runs its three supplied missions directly and produces the required
-submission outputs.
 
 ## 3. What the notebook does end to end
 
@@ -89,7 +64,7 @@ The notebook runs the complete inverse-design loop:
 3. It trains overlapping low- and high-stress experts, then blends them with a
    calibrated classifier. A one-sided stress upper bound is calibrated on held-
    out data and used as the conservative stress screen.
-4. For each mission in `runnable_cases.json`, it evaluates design candidates
+4. For each built-in mission profile, it evaluates design candidates
    with the structural surrogates and provided L/D predictor, then searches the
    bounded design space using differential evolution and short perturbation
    checks.
